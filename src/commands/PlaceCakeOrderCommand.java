@@ -1,10 +1,12 @@
-package dessertShop;
+package commands;
 
-public class PlaceOrderCommand implements Command {
+import cakes.*;
+
+public class PlaceCakeOrderCommand implements Command {
 
 	Cake cake;
 	
-	public PlaceOrderCommand(Cake cake) {
+	public PlaceCakeOrderCommand(Cake cake) {
 		this.cake = cake;
 	}
 	

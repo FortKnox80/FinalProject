@@ -1,4 +1,4 @@
-package dessertShop;
+package commands;
 
 public class InputOrderCommand {
 

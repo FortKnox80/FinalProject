@@ -1,9 +1,9 @@
-package dessertShop;
+package menu;
 
 public class MenuItem {
-	String name;
-	String description;
-	boolean glutenFree;
+	public String name;
+	public String description;
+	public boolean glutenFree;
 	double cost;
 	
 	public MenuItem(String name, String description, boolean glutenFree, double cost) {
@@ -27,5 +27,9 @@ public class MenuItem {
 	
 	public double getCost() {
 		return cost;
+	}
+	
+	public String toString() {
+		return (name + " ,$" + cost + ", " + description);
 	}
 }

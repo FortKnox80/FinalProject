@@ -1,6 +1,7 @@
 package dessertShop;
 
 import java.util.ArrayList;
+import menu.*;
 
 public class OrderAssistant {
 

@@ -1,4 +1,6 @@
-package dessertShop;
+package cakes;
+
+import cakes.*;
 
 public class UnknownCake extends Cake {
 

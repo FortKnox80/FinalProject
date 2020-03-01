@@ -1,4 +1,6 @@
-package dessertShop;
+package menu;
+
+import dessertShop.Iterator;
 
 public interface Menu {
 

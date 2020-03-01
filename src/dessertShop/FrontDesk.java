@@ -4,20 +4,19 @@ public class FrontDesk {
 
 	public static void main(String[] args) {
 		
+		WeddingShop weddingShop = new WeddingShop();
+		
+		weddingShop.menu();
 		
 		
-		
-		POSCenter pos = new POSCenter();
-		LemonCake lemonCake = new LemonCake();
-		
-		PlaceCakeOrderCommand placeLemonCakeOrder = new PlaceCakeOrderCommand(lemonCake);
-		CancelCakeOrderCommand cancelLemonCakeOrder = new CancelCakeOrderCommand(lemonCake);
+		POSConsole pos = new POSConsole();
 		
 		
-		pos.setCommand(0, placeLemonCakeOrder, cancelLemonCakeOrder);
 		
 		
 		pos.orderButtonPushed(0);
+		
+		
 	}
 
 }

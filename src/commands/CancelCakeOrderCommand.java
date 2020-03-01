@@ -1,4 +1,5 @@
-package dessertShop;
+package commands;
+import cakes.*;
 
 public class CancelCakeOrderCommand implements Command {
 

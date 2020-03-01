@@ -1,4 +1,6 @@
-package dessertShop;
+package decorators;
+
+import cakes.*;
 
 public abstract class CakeDecorator extends Cake {
 	

@@ -1,6 +1,8 @@
-package dessertShop;
+package menu;
 
 import java.util.ArrayList;
+
+import dessertShop.Iterator;
 
 public class CakeMenuIterator implements Iterator {
 
@@ -19,7 +21,7 @@ public class CakeMenuIterator implements Iterator {
 	}
 
 
-	public Object next() {
+	public MenuItem next() {
 		MenuItem menuItem = items.get(position);
 		position += 1;
 		return menuItem;
