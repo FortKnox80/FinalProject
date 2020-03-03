@@ -1,6 +1,7 @@
-package decorators;
+package decorations;
 
 import cakes.*;
+import decorators.CakeDecorator;
 
 public class PipedFlowers extends CakeDecorator {
 

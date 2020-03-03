@@ -6,7 +6,14 @@ public class FrontDesk {
 		
 		WeddingShop weddingShop = new WeddingShop();
 		
-		weddingShop.menu();
+		weddingShop.cakeMenu();
+		weddingShop.cookieMenu();
+		weddingShop.macaroonMenu();
+		weddingShop.cheesecakeMenu();
+		weddingShop.brownieMenu();
+		weddingShop.pieMenu();
+		
+		weddingShop.glutenFreeMenu();
 		
 		
 		POSConsole pos = new POSConsole();

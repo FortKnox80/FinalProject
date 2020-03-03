@@ -1,10 +1,13 @@
 package cakes;
-//A class for lemon cakes
-public class PinkChampagneCake extends Cake {
 
-	public PinkChampagneCake() {
+import dessertShop.*;
+
+//A class for lemon cakes
+public class FlourlessChocolateCake extends Cake {
+
+	public FlourlessChocolateCake() {
 		ordered = false;
-		name = "Pop the Champagne Cake";
+		name = "Flourless Chocolate Cake";
 		filling = "Lemon Curd";
 		icingFlavor = "Vanilla Buttercream";
 		fondant = "Soft Yellow Fondant";

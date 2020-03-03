@@ -2,20 +2,18 @@ package menu;
 
 import java.util.ArrayList;
 
-import cakes.*;
+import pies.*;
 import dessertShop.Iterator;
 
 //Create a menu for cakes 
-public class CakeMenu implements Menu {
+public class PieMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
-	LemonCake lemonCake = new LemonCake();
-	PinkChampagneCake pinkChampagneCake = new PinkChampagneCake();
-	GalaxyCake galaxyCake = new GalaxyCake();
-	RainbowCake rainbowCake = new RainbowCake();
-	RoseCake roseCake = new RoseCake();
-	UnknownCake unknownCake = new UnknownCake();
-	VanillaBeanCake vanillaBeanCake = new VanillaBeanCake();
-	FlourlessChocolateCake flourlessChocolateCake = new FlourlessChocolateCake();
+	
+	BlackberryPie blackberryPie = new BlackberryPie();
+	PecanPie pecanPie = new PecanPie();
+	PumpkinPie pumpkinPie = new PumpkinPie();
+	StrawberryRhubarbPie strawberryRhubarbPie = new StrawberryRhubarbPie();
+	
 	
 	//Set a maximum number of items for the menu
 	static final int MENU_ITEM_MAX = 7;
@@ -23,15 +21,13 @@ public class CakeMenu implements Menu {
 	int numberOfItems = 0;
 
 	//Create a new menu item based off of the deserts available
-	public CakeMenu() {
+	public PieMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(lemonCake.name, lemonCake.getCakeFlavor(), false, lemonCake.cost());
-		addItems(pinkChampagneCake.name, pinkChampagneCake.getCakeFlavor(), false, pinkChampagneCake.cost());
-		addItems(galaxyCake.name,galaxyCake.getCakeFlavor(), false, galaxyCake.cost());
-		addItems(rainbowCake.name, rainbowCake.getCakeFlavor(), false, rainbowCake.cost());
-		addItems(roseCake.name, roseCake.getCakeFlavor(), false, roseCake.cost());
-		addItems(vanillaBeanCake.name, vanillaBeanCake.getCakeFlavor(), false, vanillaBeanCake.cost());
-		addItems(flourlessChocolateCake.name, flourlessChocolateCake.getCakeFlavor(), true, flourlessChocolateCake.cost());
+		addItems(blackberryPie.name, blackberryPie.getPieFlavor(), false, blackberryPie.cost());
+		addItems(pecanPie.name, pecanPie.getPieFlavor(), false, pecanPie.cost());
+		addItems(pumpkinPie.name, pumpkinPie.getPieFlavor(), false, pumpkinPie.cost());
+		addItems(strawberryRhubarbPie.name, strawberryRhubarbPie.getPieFlavor(), false, strawberryRhubarbPie.cost());
+		
 		
 	}
 

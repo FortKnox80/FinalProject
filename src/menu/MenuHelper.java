@@ -13,7 +13,7 @@ public class MenuHelper {
 	public void printMenu() {
 		Iterator cakeIterator = cakeMenu.createIterator();
 
-		System.out.println("Menu\n-------Cake");
+		System.out.println("Menu\n-------");
 		printMenu(cakeIterator);
 	}
 

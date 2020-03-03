@@ -4,7 +4,7 @@ public class RoseCake extends Cake {
 
 	public RoseCake() {
 		ordered = false;
-		name = "Lemon Cake";
+		name = "Stop and Smell the Roses Cake";
 		filling = "Lemon Curd";
 		icingFlavor = "Vanilla Buttercream";
 		fondant = "Soft Yellow Fondant";
@@ -26,14 +26,14 @@ public class RoseCake extends Cake {
 	//Place the cake order
 	public boolean cakeOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a delicious lemon cake.");
+		System.out.println("Order placed for a " + name + ".");
 		return ordered;
 	}
 	
 	//Cancel the cake order
 	public boolean orderCanceled() {
 		ordered = false;
-		System.out.println("Ok your lemon cake order has been canceled.");
+		System.out.println("Ok your " + name + " order has been canceled.");
 		return ordered;
 	}
 	

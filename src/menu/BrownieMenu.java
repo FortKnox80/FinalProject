@@ -2,20 +2,19 @@ package menu;
 
 import java.util.ArrayList;
 
-import cakes.*;
+import brownies.*;
 import dessertShop.Iterator;
 
 //Create a menu for cakes 
-public class CakeMenu implements Menu {
+public class BrownieMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
-	LemonCake lemonCake = new LemonCake();
-	PinkChampagneCake pinkChampagneCake = new PinkChampagneCake();
-	GalaxyCake galaxyCake = new GalaxyCake();
-	RainbowCake rainbowCake = new RainbowCake();
-	RoseCake roseCake = new RoseCake();
-	UnknownCake unknownCake = new UnknownCake();
-	VanillaBeanCake vanillaBeanCake = new VanillaBeanCake();
-	FlourlessChocolateCake flourlessChocolateCake = new FlourlessChocolateCake();
+	
+	BlondieBrownie blondieBrownie = new BlondieBrownie();
+	ChocolateFudgeBrownie chocolateFudgeBrownie = new ChocolateFudgeBrownie();
+	ConstellationBrownie constellationBrownie = new ConstellationBrownie();
+	WhiteChocolateSwirlBrownie whiteChocolateSwirlBrownie = new WhiteChocolateSwirlBrownie();
+	
+ 	
 	
 	//Set a maximum number of items for the menu
 	static final int MENU_ITEM_MAX = 7;
@@ -23,15 +22,12 @@ public class CakeMenu implements Menu {
 	int numberOfItems = 0;
 
 	//Create a new menu item based off of the deserts available
-	public CakeMenu() {
+	public BrownieMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(lemonCake.name, lemonCake.getCakeFlavor(), false, lemonCake.cost());
-		addItems(pinkChampagneCake.name, pinkChampagneCake.getCakeFlavor(), false, pinkChampagneCake.cost());
-		addItems(galaxyCake.name,galaxyCake.getCakeFlavor(), false, galaxyCake.cost());
-		addItems(rainbowCake.name, rainbowCake.getCakeFlavor(), false, rainbowCake.cost());
-		addItems(roseCake.name, roseCake.getCakeFlavor(), false, roseCake.cost());
-		addItems(vanillaBeanCake.name, vanillaBeanCake.getCakeFlavor(), false, vanillaBeanCake.cost());
-		addItems(flourlessChocolateCake.name, flourlessChocolateCake.getCakeFlavor(), true, flourlessChocolateCake.cost());
+		addItems(blondieBrownie.name, blondieBrownie.getBrownieFlavor(), false, blondieBrownie.cost());
+		addItems(chocolateFudgeBrownie.name, chocolateFudgeBrownie.getBrownieFlavor(), false, chocolateFudgeBrownie.cost());
+		addItems(constellationBrownie.name, constellationBrownie.getBrownieFlavor(), false, constellationBrownie.cost());
+		addItems(whiteChocolateSwirlBrownie.name, whiteChocolateSwirlBrownie.getBrownieFlavor(), false, whiteChocolateSwirlBrownie.cost());
 		
 	}
 
