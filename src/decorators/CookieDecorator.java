@@ -1,8 +1,8 @@
 package decorators;
 
-import cakes.*;
+import cookies.*;
 
-public abstract class CookieDecorator extends Cake {
+public abstract class CookieDecorator extends Cookie{
 	
 	public abstract String getCookieFlavor();
 

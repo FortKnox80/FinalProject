@@ -1,6 +1,9 @@
 package cakes;
+
+import dessertShop.Desserts;
+
 //An abstract class for all of the cakes
-public abstract class Cake {
+public abstract class Cake extends Desserts {
 	
 	//Has the cake been ordered
 	public boolean ordered;
@@ -18,7 +21,7 @@ public abstract class Cake {
 	}
 
 	//Get the cake flavor
-	public String getCakeFlavor() {
+	public String getFlavor() {
 		return "A " + name + " " + spongeCakeType+ " "+ filling+ " " + icingFlavor+ " Cake: ";
 	}
 	

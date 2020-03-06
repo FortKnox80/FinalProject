@@ -3,9 +3,9 @@ package macaroons;
 import dessertShop.*;
 
 //A class for lemon macaroons
-public class OrangCreamMacaroon extends Macaroon {
+public class OrangeCreamMacaroon extends Macaroon {
 
-	public OrangCreamMacaroon() {
+	public OrangeCreamMacaroon() {
 		ordered = false;
 		name = "Orange Cream Macaroon";
 		filling = "Delicate Vanilla Buttercream With Orange Rwduction Folded In";

@@ -1,6 +1,9 @@
 package macaroons;
+
+import dessertShop.Desserts;
+
 //An abstract class for all of the macaroons
-public abstract class Macaroon {
+public abstract class Macaroon extends Desserts{
 	
 	//Has the macaroon been ordered
 	public boolean ordered;

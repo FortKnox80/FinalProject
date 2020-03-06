@@ -11,7 +11,7 @@ public class MacaroonMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
 	
 	LavenderMacaroon lavenderMacaroon = new LavenderMacaroon();
-	OrangCreamMacaroon orangCreamMacaroon = new OrangCreamMacaroon();
+	OrangeCreamMacaroon orangCreamMacaroon = new OrangeCreamMacaroon();
 	LemonMacaroon lemonMacaroon = new LemonMacaroon();
 	RaspberryMacaroon raspberryMacaroon = new RaspberryMacaroon();
 	StrawberryMacaroon strawberryMacaroon = new StrawberryMacaroon();

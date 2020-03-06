@@ -1,6 +1,9 @@
 package cookies;
+
+import dessertShop.Desserts;
+
 //An abstract class for all of the cookies
-public abstract class Cookie {
+public abstract class Cookie extends Desserts{
 	
 	//Has the cake been ordered
 	public boolean ordered;

@@ -1,7 +1,9 @@
 package pies;
 
+import dessertShop.Desserts;
+
 //An abstract class for all of the pies
-public abstract class Pie {
+public abstract class Pie extends Desserts{
 	
 	//Has the pie been ordered
 	public boolean ordered;

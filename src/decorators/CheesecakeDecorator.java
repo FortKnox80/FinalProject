@@ -1,8 +1,8 @@
 package decorators;
 
-import cakes.*;
+import cheesecakes.*;
 
-public abstract class CheesecakeDecorator extends Cake {
+public abstract class CheesecakeDecorator extends Cheesecake{
 	
 	public abstract String getCheesecakeFlavor();
 

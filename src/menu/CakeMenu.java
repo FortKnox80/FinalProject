@@ -25,13 +25,13 @@ public class CakeMenu implements Menu {
 	//Create a new menu item based off of the deserts available
 	public CakeMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(lemonCake.name, lemonCake.getCakeFlavor(), false, lemonCake.cost());
-		addItems(pinkChampagneCake.name, pinkChampagneCake.getCakeFlavor(), false, pinkChampagneCake.cost());
-		addItems(galaxyCake.name,galaxyCake.getCakeFlavor(), false, galaxyCake.cost());
-		addItems(rainbowCake.name, rainbowCake.getCakeFlavor(), false, rainbowCake.cost());
-		addItems(roseCake.name, roseCake.getCakeFlavor(), false, roseCake.cost());
-		addItems(vanillaBeanCake.name, vanillaBeanCake.getCakeFlavor(), false, vanillaBeanCake.cost());
-		addItems(flourlessChocolateCake.name, flourlessChocolateCake.getCakeFlavor(), true, flourlessChocolateCake.cost());
+		addItems(lemonCake.name, lemonCake.getFlavor(), false, lemonCake.cost());
+		addItems(pinkChampagneCake.name, pinkChampagneCake.getFlavor(), false, pinkChampagneCake.cost());
+		addItems(galaxyCake.name,galaxyCake.getFlavor(), false, galaxyCake.cost());
+		addItems(rainbowCake.name, rainbowCake.getFlavor(), false, rainbowCake.cost());
+		addItems(roseCake.name, roseCake.getFlavor(), false, roseCake.cost());
+		addItems(vanillaBeanCake.name, vanillaBeanCake.getFlavor(), false, vanillaBeanCake.cost());
+		addItems(flourlessChocolateCake.name, flourlessChocolateCake.getFlavor(), true, flourlessChocolateCake.cost());
 		
 	}
 

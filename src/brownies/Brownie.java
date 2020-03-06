@@ -1,6 +1,9 @@
 package brownies;
+
+import dessertShop.Desserts;
+
 //An abstract class for all of the brownies
-public abstract class Brownie {
+public abstract class Brownie extends Desserts{
 	
 	//Has the brownie been ordered
 	public boolean ordered;

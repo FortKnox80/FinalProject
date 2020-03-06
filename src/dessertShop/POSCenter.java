@@ -16,7 +16,7 @@ public class POSCenter {
 
 	//Instantiate all the components of the POS center
 	public POSCenter() {
-		buttonNumber = 10;
+		buttonNumber = 50;
 		placeOrder = new Command[buttonNumber];
 		cancelOrder = new Command[buttonNumber];
 
