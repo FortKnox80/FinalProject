@@ -1,5 +1,4 @@
 package commands;
-
 import brownies.Brownie;
 import cakes.*;
 import cheesecakes.Cheesecake;
@@ -8,7 +7,8 @@ import dessertShop.Desserts;
 import macaroons.Macaroon;
 import pies.Pie;
 
-public class PlaceCakeOrderCommand implements Command {
+public class CancelOrderCommand implements Command {
+
 
 	Cake cake;
 	Pie pie;
@@ -17,7 +17,7 @@ public class PlaceCakeOrderCommand implements Command {
 	Brownie brownie;
 	Macaroon macaroon;
 	
-	public PlaceCakeOrderCommand(Desserts dessertType) {
+	public CancelOrderCommand(Desserts dessertType) {
 		if(dessertType.toString().toLowerCase().contains("cake")) {
 			this.cake = (Cake) dessertType;
 		}
@@ -39,13 +39,14 @@ public class PlaceCakeOrderCommand implements Command {
 	}
 	
 	public void execute() {
-		cake.cakeOrdered();
+		cake.cancelOrder();
 		
 	}
 
 	
 	public void undo() {
-		cake.cancelOrder();
+		cake.cakeOrdered();
+		
 	}
 
 	
