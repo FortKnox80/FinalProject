@@ -11,6 +11,9 @@ public abstract class Desserts {
 	public String getName() {
 		return name;
 	}
+	public String getFlavor() {
+	 return name;
+	}
 	
 	public boolean dessertOrdered() {
 		System.out.println("Your "+name+ " has been placed");

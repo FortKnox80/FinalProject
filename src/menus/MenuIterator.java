@@ -1,15 +1,15 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
-import dessertShop.Iterator;
+import menus.Iterator;
 
-public class CakeMenuIterator implements Iterator {
+public class MenuIterator implements Iterator {
 
 	ArrayList<MenuItem> items = new ArrayList<MenuItem>();
 	int position = 0;
 	
-	public CakeMenuIterator(ArrayList<MenuItem> items) {
+	public MenuIterator(ArrayList<MenuItem> items) {
 		this.items = items;
 	}
 	public boolean hasNext() {

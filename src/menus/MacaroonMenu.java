@@ -1,9 +1,9 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
 import cakes.*;
-import dessertShop.Iterator;
+import menus.Iterator;
 import macaroons.*;
 
 //Create a menu for cakes 
@@ -26,12 +26,12 @@ public class MacaroonMenu implements Menu {
 	//Create a new menu item based off of the deserts available
 	public MacaroonMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(lavenderMacaroon.name, lavenderMacaroon.getMacaroonFlavor(), false, lavenderMacaroon.cost());
-		addItems(orangCreamMacaroon.name, orangCreamMacaroon.getMacaroonFlavor(), false, orangCreamMacaroon.cost());
-		addItems(lemonMacaroon.name, lemonMacaroon.getMacaroonFlavor(), false, lemonMacaroon.cost());
-		addItems(raspberryMacaroon.name, raspberryMacaroon.getMacaroonFlavor(), false, raspberryMacaroon.cost());
-		addItems(strawberryMacaroon.name, strawberryMacaroon.getMacaroonFlavor(), false, strawberryMacaroon.cost());
-		addItems(vanillaMacaroon.name, vanillaMacaroon.getMacaroonFlavor(), false, vanillaMacaroon.cost());
+		addItems(lavenderMacaroon.name, lavenderMacaroon.getFlavor(), false, lavenderMacaroon.cost());
+		addItems(orangCreamMacaroon.name, orangCreamMacaroon.getFlavor(), false, orangCreamMacaroon.cost());
+		addItems(lemonMacaroon.name, lemonMacaroon.getFlavor(), false, lemonMacaroon.cost());
+		addItems(raspberryMacaroon.name, raspberryMacaroon.getFlavor(), false, raspberryMacaroon.cost());
+		addItems(strawberryMacaroon.name, strawberryMacaroon.getFlavor(), false, strawberryMacaroon.cost());
+		addItems(vanillaMacaroon.name, vanillaMacaroon.getFlavor(), false, vanillaMacaroon.cost());
 		
 		
 	}
@@ -55,12 +55,12 @@ public class MacaroonMenu implements Menu {
 	
 	//Create an iterator for the menu
 	public Iterator createIterator() {
-		return new CakeMenuIterator(menuItems);
+		return new MenuIterator(menuItems);
 	}
 	
 	//Create a new toString method to print out the name of the menu
 	public String toString() {
-		return "Our Dellicious Cake Menu";
+		return "Macaroon Menu";
 	}
 
 }

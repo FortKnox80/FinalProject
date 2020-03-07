@@ -1,6 +1,6 @@
-package dessertShop;
+package menus;
 
-import menu.MenuItem;
+import menus.MenuItem;
 
 public interface Iterator {
 	

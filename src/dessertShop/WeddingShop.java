@@ -1,8 +1,7 @@
 package dessertShop;
 
 import cakes.*;
-import menu.*;
-import menu.MenuHelper;
+import menus.*;
 
 public class WeddingShop extends Shop {
 	 CakeMenu cakeMenu = new CakeMenu();
@@ -23,37 +22,43 @@ public class WeddingShop extends Shop {
 	 PieMenu pieMenu = new PieMenu();
 	 MenuHelper pieHelper = new MenuHelper(pieMenu);
 	 
-	 Cake bakeACake(String type) {
-		 Cake cake = new UnknownCake();
-		 
-		 if(type.toLowerCase().contains("lemon")) {
-			  cake = new LemonCake();
-		 }
-		 return cake;
-	}
+	 DecorationsMenu decorationsMenu = new DecorationsMenu();
+	 MenuHelper decorationsHelper = new MenuHelper(decorationsMenu);
+	 
+	
 	 
 	public void cakeMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		 cakeHelper.printMenu();
 	}
 	
 	public void cookieMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		cookieHelper.printMenu();
 	}
 	
 	public void macaroonMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		macaroonHelper.printMenu();
 	}
 	
 	public void cheesecakeMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		cheesecakeHelper.printMenu();
 	}
 	
 	public void pieMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		pieHelper.printMenu();
 	}
 	
 	public void brownieMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		brownieHelper.printMenu();
+	}
+	public void decorationsMenu() {
+		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
+		decorationsHelper.printMenu();
 	}
 	
 	
@@ -67,5 +72,4 @@ public class WeddingShop extends Shop {
 		 pieHelper.printGlutenFreeMenu();
 		 brownieHelper.printGlutenFreeMenu();
 	}
-	
 }

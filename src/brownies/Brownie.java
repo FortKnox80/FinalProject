@@ -19,7 +19,7 @@ public abstract class Brownie extends Desserts{
 	}
 
 	//Get the flavor
-	public String getBrownieFlavor() {
+	public String getFlavor() {
 		return "A " + name + " "+ brownieBase + " " + fillings + " Brownie: ";
 	}
 	

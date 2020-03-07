@@ -19,7 +19,7 @@ public abstract class Macaroon extends Desserts{
 	}
 
 	//Get the flavor
-	public String getMacaroonFlavor() {
+	public String getFlavor() {
 		return "A " + name + " "+ macaroonFlavor + " " + filling + " Macaroon: ";
 	}
 	

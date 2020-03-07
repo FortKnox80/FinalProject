@@ -20,7 +20,7 @@ public abstract class Cheesecake extends Desserts{
 	}
 
 	//Get the flavor
-	public String getCheesecakeFlavor() {
+	public String getFlavor() {
 		return "A " + name + " "+crust+ " " + filling + " " + toppings + " Cheesecake ";
 	}
 	

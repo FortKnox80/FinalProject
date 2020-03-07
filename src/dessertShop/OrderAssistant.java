@@ -1,7 +1,8 @@
 package dessertShop;
 
 import java.util.ArrayList;
-import menu.*;
+
+import menus.*;
 
 public class OrderAssistant {
 
@@ -24,7 +25,7 @@ public class OrderAssistant {
 		}
 	}
 	public void printMenu() {
-		CakeMenuIterator readMenu = new CakeMenuIterator(items); 
+		MenuIterator readMenu = new MenuIterator(items); 
 		//While there is still an item on the menu, print it out using the above print menu method
 		while (readMenu.hasNext()) {
 			Menu menu = (Menu) readMenu.next();

@@ -1,32 +1,27 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
-import pies.*;
-import dessertShop.Iterator;
+import brownies.*;
+import menus.Iterator;
 
 //Create a menu for cakes 
-public class PieMenu implements Menu {
+public class DecorationsMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
-	
-	BlackberryPie blackberryPie = new BlackberryPie();
-	PecanPie pecanPie = new PecanPie();
-	PumpkinPie pumpkinPie = new PumpkinPie();
-	StrawberryRhubarbPie strawberryRhubarbPie = new StrawberryRhubarbPie();
-	
-	
 	//Set a maximum number of items for the menu
 	static final int MENU_ITEM_MAX = 7;
 	//Keep a running count of items added to the menu
 	int numberOfItems = 0;
 
 	//Create a new menu item based off of the deserts available
-	public PieMenu() {
+	public DecorationsMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(blackberryPie.name, blackberryPie.getPieFlavor(), false, blackberryPie.cost());
-		addItems(pecanPie.name, pecanPie.getPieFlavor(), false, pecanPie.cost());
-		addItems(pumpkinPie.name, pumpkinPie.getPieFlavor(), false, pumpkinPie.cost());
-		addItems(strawberryRhubarbPie.name, strawberryRhubarbPie.getPieFlavor(), false, strawberryRhubarbPie.cost());
+		addItems("Edible Pearls", "Gorgeous, Shinning Sugar Pearls", true, 19.99);
+		addItems("Fresh Flowers", "Fresh, Local Grown Flowers", true, 49.99);
+		addItems("Gold Leaf", "Edible Gold Leaf Flakes to Add a Pop", true, 39.99);
+		addItems("Hand Painting","Edible Works of Art Hand Painted By Fine Craftsmen", true, 99.99);
+		addItems("Piped Buttercream Flowers", "Pretty Flowers Delicately Piped Along Your Dessert", true, 29.99);
+		addItems("Hand Piped Message", "Add a Personalized Message", true, 9.99);
 		
 		
 	}
@@ -50,12 +45,12 @@ public class PieMenu implements Menu {
 	
 	//Create an iterator for the menu
 	public Iterator createIterator() {
-		return new CakeMenuIterator(menuItems);
+		return new MenuIterator(menuItems);
 	}
 	
 	//Create a new toString method to print out the name of the menu
 	public String toString() {
-		return "Our Dellicious Cake Menu";
+		return "Peruse Our Decorations";
 	}
 
 }

@@ -1,9 +1,9 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
 import brownies.*;
-import dessertShop.Iterator;
+import menus.Iterator;
 
 //Create a menu for cakes 
 public class BrownieMenu implements Menu {
@@ -14,8 +14,6 @@ public class BrownieMenu implements Menu {
 	ConstellationBrownie constellationBrownie = new ConstellationBrownie();
 	WhiteChocolateSwirlBrownie whiteChocolateSwirlBrownie = new WhiteChocolateSwirlBrownie();
 	
- 	
-	
 	//Set a maximum number of items for the menu
 	static final int MENU_ITEM_MAX = 7;
 	//Keep a running count of items added to the menu
@@ -24,10 +22,10 @@ public class BrownieMenu implements Menu {
 	//Create a new menu item based off of the deserts available
 	public BrownieMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(blondieBrownie.name, blondieBrownie.getBrownieFlavor(), false, blondieBrownie.cost());
-		addItems(chocolateFudgeBrownie.name, chocolateFudgeBrownie.getBrownieFlavor(), false, chocolateFudgeBrownie.cost());
-		addItems(constellationBrownie.name, constellationBrownie.getBrownieFlavor(), false, constellationBrownie.cost());
-		addItems(whiteChocolateSwirlBrownie.name, whiteChocolateSwirlBrownie.getBrownieFlavor(), false, whiteChocolateSwirlBrownie.cost());
+		addItems(blondieBrownie.name, blondieBrownie.getFlavor(), false, blondieBrownie.cost());
+		addItems(chocolateFudgeBrownie.name, chocolateFudgeBrownie.getFlavor(), false, chocolateFudgeBrownie.cost());
+		addItems(constellationBrownie.name, constellationBrownie.getFlavor(), false, constellationBrownie.cost());
+		addItems(whiteChocolateSwirlBrownie.name, whiteChocolateSwirlBrownie.getFlavor(), false, whiteChocolateSwirlBrownie.cost());
 		
 	}
 
@@ -50,12 +48,12 @@ public class BrownieMenu implements Menu {
 	
 	//Create an iterator for the menu
 	public Iterator createIterator() {
-		return new CakeMenuIterator(menuItems);
+		return new MenuIterator(menuItems);
 	}
 	
 	//Create a new toString method to print out the name of the menu
 	public String toString() {
-		return "Our Dellicious Cake Menu";
+		return "Brownie Menu";
 	}
 
 }

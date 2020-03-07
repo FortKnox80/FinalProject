@@ -20,7 +20,7 @@ public abstract class Cookie extends Desserts{
 	}
 
 	//Get the flavor
-	public String getCookieFlavor() {
+	public String getFlavor() {
 		return "A " + name + " "+cookieBase+ " " + tastyBits + " " + toppings + " Cookie: ";
 	}
 	

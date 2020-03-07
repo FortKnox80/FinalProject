@@ -1,8 +1,8 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
-import dessertShop.Iterator;
+import menus.Iterator;
 import cheesecakes.*;
 
 //Create a menu for the cheesecakes 
@@ -24,11 +24,11 @@ public class CheesecakeMenu implements Menu {
 	public CheesecakeMenu() {
 		menuItems = new ArrayList<MenuItem>();
 		
-		addItems(blackberryCheesecake.name, blackberryCheesecake.getCheesecakeFlavor(), false, blackberryCheesecake.cost());
-		addItems(blueberryCheesecake.name, blueberryCheesecake.getCheesecakeFlavor(), false, blueberryCheesecake.cost());
-		addItems(decadentChocolateCheesecake.name, decadentChocolateCheesecake.getCheesecakeFlavor(), true, decadentChocolateCheesecake.cost());
-		addItems(raspberryDelightCheesecake.name, raspberryDelightCheesecake.getCheesecakeFlavor(), false, raspberryDelightCheesecake.cost());
-		addItems(strawberryCheesecake.name, strawberryCheesecake.getCheesecakeFlavor(), false, strawberryCheesecake.cost());
+		addItems(blackberryCheesecake.name, blackberryCheesecake.getFlavor(), false, blackberryCheesecake.cost());
+		addItems(blueberryCheesecake.name, blueberryCheesecake.getFlavor(), false, blueberryCheesecake.cost());
+		addItems(decadentChocolateCheesecake.name, decadentChocolateCheesecake.getFlavor(), true, decadentChocolateCheesecake.cost());
+		addItems(raspberryDelightCheesecake.name, raspberryDelightCheesecake.getFlavor(), false, raspberryDelightCheesecake.cost());
+		addItems(strawberryCheesecake.name, strawberryCheesecake.getFlavor(), false, strawberryCheesecake.cost());
 		
 		
 	}
@@ -52,12 +52,12 @@ public class CheesecakeMenu implements Menu {
 	
 	//Create an iterator for the menu
 	public Iterator createIterator() {
-		return new CakeMenuIterator(menuItems);
+		return new MenuIterator(menuItems);
 	}
 	
 	//Create a new toString method to print out the name of the menu
 	public String toString() {
-		return "Our Dellicious Cheesecake Menu";
+		return "Cheesecake Menu";
 	}
 
 }

@@ -1,9 +1,9 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
 import cookies.*;
-import dessertShop.Iterator;
+import menus.Iterator;
 
 //Create a menu for cookies 
 public class CookieMenu implements Menu {
@@ -21,10 +21,10 @@ public class CookieMenu implements Menu {
 	//Create a new menu item based off of the deserts available
 	public CookieMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(frostedSugarCookie.name, frostedSugarCookie.getCookieFlavor(), false, frostedSugarCookie.cost());
-		addItems(gooeyChocolateChunkCookie.name, gooeyChocolateChunkCookie.getCookieFlavor(), false, gooeyChocolateChunkCookie.cost());
-		addItems(lavenderBlueberryCookie.name, lavenderBlueberryCookie.getCookieFlavor(), false, lavenderBlueberryCookie.cost());
-		addItems(lemonCookie.name, lemonCookie.getCookieFlavor(), false, lemonCookie.cost());
+		addItems(frostedSugarCookie.name, frostedSugarCookie.getFlavor(), false, frostedSugarCookie.cost());
+		addItems(gooeyChocolateChunkCookie.name, gooeyChocolateChunkCookie.getFlavor(), false, gooeyChocolateChunkCookie.cost());
+		addItems(lavenderBlueberryCookie.name, lavenderBlueberryCookie.getFlavor(), false, lavenderBlueberryCookie.cost());
+		addItems(lemonCookie.name, lemonCookie.getFlavor(), false, lemonCookie.cost());
 	}
 
 	//A method for adding in a new item to the menu
@@ -46,12 +46,12 @@ public class CookieMenu implements Menu {
 	
 	//Create an iterator for the menu
 	public Iterator createIterator() {
-		return new CakeMenuIterator(menuItems);
+		return new MenuIterator(menuItems);
 	}
 	
 	//Create a new toString method to print out the name of the menu
 	public String toString() {
-		return "Our Dellicious Cookie Menu";
+		return "Cookie Menu";
 	}
 
 }

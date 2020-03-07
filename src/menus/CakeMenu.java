@@ -1,9 +1,9 @@
-package menu;
+package menus;
 
 import java.util.ArrayList;
 
 import cakes.*;
-import dessertShop.Iterator;
+import menus.Iterator;
 
 //Create a menu for cakes 
 public class CakeMenu implements Menu {
@@ -54,12 +54,12 @@ public class CakeMenu implements Menu {
 	
 	//Create an iterator for the menu
 	public Iterator createIterator() {
-		return new CakeMenuIterator(menuItems);
+		return new MenuIterator(menuItems);
 	}
 	
 	//Create a new toString method to print out the name of the menu
 	public String toString() {
-		return "Our Dellicious Cake Menu";
+		return "Cake Menu";
 	}
 
 }

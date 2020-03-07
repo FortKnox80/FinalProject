@@ -2,10 +2,10 @@ package dessertShop;
 
 
 import brownies.*;
-import cakeDecoarations.*;
 import cakes.*;
 import cheesecakes.*;
 import cookies.*;
+import decorations.*;
 import macaroons.*;
 import pies.*;
 import commands.*;
