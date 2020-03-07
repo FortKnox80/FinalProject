@@ -4,14 +4,14 @@ import menus.Iterator;
 
 public class MenuHelper {
 
-	Menu cakeMenu;
+	Menu menu;
 
-	public MenuHelper(Menu cakeMenu) {
-		this.cakeMenu = cakeMenu;
+	public MenuHelper(Menu menu) {
+		this.menu = menu;
 	}
 
 	public void printMenu() {
-		Iterator cakeIterator = cakeMenu.createIterator();
+		Iterator cakeIterator = menu.createIterator();
 
 		System.out.println("Menu\n-------");
 		printMenu(cakeIterator);
@@ -28,11 +28,11 @@ public class MenuHelper {
 	}
 	
 	public void printGlutenFreeMenu() {
-		printGlutenFreeMenu(cakeMenu.createIterator());
+		printGlutenFreeMenu(menu.createIterator());
 	}
 
 	public boolean isItemGlutenFree(String name) {
-		Iterator cakeMenuIterator = cakeMenu.createIterator();
+		Iterator cakeMenuIterator = menu.createIterator();
 		
 		if(isGlutenFree(name, cakeMenuIterator)) {
 			return true;
