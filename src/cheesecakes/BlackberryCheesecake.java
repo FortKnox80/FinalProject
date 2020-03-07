@@ -23,13 +23,13 @@ public class BlackberryCheesecake extends Cheesecake {
 	//Set the cheesecake cost
 	public double cost() {
 		
-		return 100.00;
+		return 70.00;
 	}
 	
 	//Place the cheesecake order
-	public boolean cheesecakeOrdered() {
+	public boolean dessertOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

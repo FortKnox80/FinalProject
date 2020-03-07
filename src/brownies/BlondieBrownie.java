@@ -9,7 +9,7 @@ public class BlondieBrownie extends Brownie {
 		ordered = false;
 		
 		name = "Blondes Have More Fun";
-		brownieBase = "Blondie Brownie";
+		brownieBase = "Blondie Brownie Base";
 		fillings = "Milk Chocolate Chunks";
 		
 	}
@@ -24,7 +24,7 @@ public class BlondieBrownie extends Brownie {
 	//Set the brownie cost
 	public double cost() {
 		
-		return 100.00;
+		return 90.00;
 	}
 	
 	//Place the brownie order

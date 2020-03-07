@@ -8,9 +8,9 @@ public class FrostedSugarCookie extends Cookie {
 	public FrostedSugarCookie() {
 		ordered = false;
 		name = "Fun and Fabulous Sugar Cookies";
-		tastyBits = "White Chocolate Chunks";
-		cookieBase = "Soft Lemon Sugar Cookie";
-		toppings = "Yummy Cream Cheese Frosting";
+		tastyBits = "Buttery Goodness";
+		cookieBase = "Soft Vanilla Sugar Cookie";
+		toppings = "Topped With Yummy Vanilla Buttercream Frosting";
 	}
 
 	//A method to bake the cookie

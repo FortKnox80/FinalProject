@@ -8,8 +8,8 @@ public class WhiteChocolateSwirlBrownie extends Brownie {
 	public WhiteChocolateSwirlBrownie() {
 		ordered = false;
 		name = "White Chocolate Swirl Brownie";
-		brownieBase = "Rich Chocolate Brownie";
-		fillings = "Creamy White Chocolate Fudge Swirl";
+		brownieBase = "Rich Chocolate Brownie Base";
+		fillings = "A Creamy White Chocolate Fudge Swirl";
 		
 	}
 
@@ -23,7 +23,7 @@ public class WhiteChocolateSwirlBrownie extends Brownie {
 	//Set the brownie cost
 	public double cost() {
 		
-		return 100.00;
+		return 95.00;
 	}
 	
 	//Place the brownie order

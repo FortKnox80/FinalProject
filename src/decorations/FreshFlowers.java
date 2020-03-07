@@ -11,11 +11,11 @@ public class FreshFlowers extends Decorator {
 		dessertType = dessert;
 	}
 	public String getFlavor() {
-		return dessertType.getFlavor() + "add beautiful fresh flowers to create a finished look,";
+		return dessertType.getFlavor() + ", Topped With Some Fresh Flowers to Create a Finished Look";
 	}
 
 	public double cost() {
 		
-		return dessertType.cost() + 19.99;
+		return dessertType.cost() + 59.99;
 	}
 }

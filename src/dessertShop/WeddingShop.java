@@ -57,7 +57,6 @@ public class WeddingShop extends Shop {
 		brownieHelper.printMenu();
 	}
 	public void decorationsMenu() {
-		System.out.println("All of desserts for our weddings are fun, yet elegant and tasteful:");
 		decorationsHelper.printMenu();
 	}
 	

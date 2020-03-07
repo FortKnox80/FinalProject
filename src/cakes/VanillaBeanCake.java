@@ -5,9 +5,10 @@ public class VanillaBeanCake extends Cake {
 	public VanillaBeanCake() {
 		ordered = false;
 		name = "Madagascar Vanilla Bean Cake";
-		filling = "Lemon Curd";
+		spongeCakeType = "Vanilla Bean Angel Food Cake";
+		filling = "Vanilla Whipped Cream";
 		icingFlavor = "Vanilla Buttercream";
-		fondant = "Soft Yellow Fondant";
+		fondant = "";
 	}
 
 	//A method to bake the cake

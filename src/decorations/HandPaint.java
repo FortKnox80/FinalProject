@@ -12,11 +12,11 @@ public class HandPaint extends Decorator {
 	}
 
 	public String getFlavor() {
-		return dessertType.getFlavor() + "we'll create a unique look with some edible watercolor paintings,";
+		return dessertType.getFlavor() + ", With a Unique, Edible Watercolor Painting";
 	}
 
 	public double cost() {
 		
-		return dessertType.cost() + 19.99;
+		return dessertType.cost() + 79.99;
 	}
 }

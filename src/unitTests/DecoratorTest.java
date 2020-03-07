@@ -8,15 +8,32 @@ import org.junit.jupiter.api.Test;
 import cakes.*;
 import decorations.*;
 import dessertShop.Desserts;
+import pies.BlackberryPie;
 
 class DecoratorTest {
 
 	@Test
 	void testDecorator() {
-		Desserts cake = new LemonCake();
-		cake = new EdiblePearls(cake);
-		String decorated = cake.getFlavor();
-		assertEquals(decorated, "A Delicate Lemon Cake null Lemon Curd Vanilla Buttercream Cake: add a classic look with some edible pearls,");
+		
+		Desserts pearlCake = new LemonCake();
+		pearlCake = new EdiblePearls(pearlCake);
+		String decorated = pearlCake.getFlavor();
+		assertEquals(decorated, "Delicate Lemon Cake: A Cake With a Lemon Zest Sponge Base and Lemon Curd and "
+				+ "Vanilla Buttercream Layers. All Topped With Bright White Vanilla Buttercream Soft Yellow Fondant, Made to Look Classic With Some Edible Pearls");
+		
+		Desserts goldCake = new LemonCake();
+		goldCake = new GoldLeaf(goldCake);
+		String gold = goldCake.getFlavor();
+		assertEquals(gold, "Delicate Lemon Cake: A Cake With a Lemon Zest Sponge Base and Lemon Curd and Vanilla Buttercream Layers."
+				+ " All Topped With Bright White Vanilla Buttercream Soft Yellow Fondant, Topped With Some Beautiful Gold Leaf");
+		
+		Desserts flowerPie = new BlackberryPie();
+		flowerPie = new FreshFlowers(flowerPie);
+		String flower = flowerPie.getFlavor();
+		assertEquals(flower, "Handpicked Blackberry Pie: Made With a Flakey, Buttery Crust Topped With Blackbird Art Work and Filled With Fresh, Handpicked Blackerries , "
+				+ "Topped With Some Fresh Flowers to Create a Finished Look");
 	}
+	
+	
 
 }

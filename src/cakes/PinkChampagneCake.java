@@ -5,9 +5,10 @@ public class PinkChampagneCake extends Cake {
 	public PinkChampagneCake() {
 		ordered = false;
 		name = "Pop the Champagne Cake";
-		filling = "Lemon Curd";
-		icingFlavor = "Vanilla Buttercream";
-		fondant = "Soft Yellow Fondant";
+		filling = "Bright White, Vanilla Swiss Buttercream";
+		spongeCakeType = "Fluffy Pink Champange";
+		icingFlavor = "Pink Champagne Vanilla Swiss Buttercream";
+		fondant = "and a Soft, White, Quilted Vanilla Fondant";
 	}
 
 	//A method to bake the cake
@@ -20,7 +21,7 @@ public class PinkChampagneCake extends Cake {
 	//Set the cake cost
 	public double cost() {
 		
-		return 100.00;
+		return 300.00;
 	}
 	
 	//Place the cake order

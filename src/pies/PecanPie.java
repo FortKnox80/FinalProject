@@ -7,7 +7,7 @@ public class PecanPie extends Pie {
 		ordered = false;
 		name = "Grandma's Pecan Pie";
 		filling = "Creamy, Rich Pecan Filling";
-		crust = "Flakey, Buttery Crust With and Open Top and a Pretty Crust Based Leaf";
+		crust = "Flakey, Buttery Crust With an Open Top and a Pretty Crust Based Leaf";
 	}
 
 	//A method to bake the pie
@@ -20,7 +20,7 @@ public class PecanPie extends Pie {
 	//Set the pie cost
 	public double cost() {
 		
-		return 100.00;
+		return 70.00;
 	}
 	
 	//Place the pie order

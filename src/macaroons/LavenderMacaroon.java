@@ -22,7 +22,7 @@ public class LavenderMacaroon extends Macaroon {
 	//Set the macaroon cost
 	public double cost() {
 		
-		return 100.00;
+		return 50.00;
 	}
 	
 	//Place the macaroon order

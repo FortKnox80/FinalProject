@@ -8,9 +8,9 @@ public class LavenderBlueberryCookie extends Cookie {
 	public LavenderBlueberryCookie() {
 		ordered = false;
 		name = "Lucious Lavender Blueberry Cookie";
-		tastyBits = "White Chocolate Chunks";
-		cookieBase = "Soft Lemon Sugar Cookie";
-		toppings = "Lemon Curd";
+		tastyBits = "Fresh Blueberries";
+		cookieBase = "Buttery Lavender Cookie";
+		toppings = " ";
 	}
 
 	//A method to bake the cookie

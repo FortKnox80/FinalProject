@@ -11,12 +11,12 @@ public class Writing extends Decorator {
 	}
 
 	public String getFlavor() {
-		return dessertType.getFlavor() + "add a personalized message,";
+		return dessertType.getFlavor() + ", With a Personalized Message";
 	}
 
 	public double cost() {
 		
-		return dessertType.cost() + 19.99;
+		return dessertType.cost() + 9.99;
 	}
 
 }

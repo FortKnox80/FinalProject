@@ -5,9 +5,10 @@ public class GalaxyCake extends Cake {
 	public GalaxyCake() {
 		ordered = false;
 		name = "Infinite Galaxy Cake";
-		filling = "Lemon Curd";
-		icingFlavor = "Vanilla Buttercream";
-		fondant = "Soft Yellow Fondant";
+		filling = "Chocolate Ganache";
+		spongeCakeType = "Dark Chocolate Sponge With Planets Baked In";
+		icingFlavor = "Mirror Glaze";
+		fondant = "";
 	}
 
 	//A method to bake the cake
@@ -20,7 +21,7 @@ public class GalaxyCake extends Cake {
 	//Set the cake cost
 	public double cost() {
 		
-		return 100.00;
+		return 250.00;
 	}
 	
 	//Place the cake order

@@ -11,11 +11,11 @@ public class EdiblePearls extends Decorator {
 	}
 	
 	public String getFlavor() {
-		return dessertType.getFlavor() + "add a classic look with some edible pearls,";
+		return dessertType.getFlavor() + ", Made to Look Classic With Some Edible Pearls";
 	}
 
 	public double cost() {
 		
-		return dessertType.cost() + 19.99;
+		return dessertType.cost() + 39.99;
 	}
 }

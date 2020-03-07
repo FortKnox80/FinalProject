@@ -11,12 +11,12 @@ public class PipedFlowers extends Decorator {
 	}
 
 	public String getFlavor() {
-		return dessertType.getFlavor() + "adding some gorgeous buttercream flowers";
+		return dessertType.getFlavor() + ", Topped With Some Gorgeous Buttercream Flowers";
 	}
 
 	public double cost() {
 		
-		return dessertType.cost() + 19.99;
+		return dessertType.cost() + 39.99;
 	}
 
 }

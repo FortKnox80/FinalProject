@@ -12,11 +12,11 @@ public class GoldLeaf extends Decorator {
 	}
 
 	public String getFlavor() {
-		return dessertType.getFlavor() + "let's top it with some beautiful gold leaf,";
+		return dessertType.getFlavor() + ", Topped With Some Beautiful Gold Leaf";
 	}
 
 	public double cost() {
 		
-		return dessertType.cost() + 19.99;
+		return dessertType.cost() + 49.99;
 	}
 }

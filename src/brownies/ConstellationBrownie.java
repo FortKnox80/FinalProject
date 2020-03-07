@@ -8,7 +8,7 @@ public class ConstellationBrownie extends Brownie {
 	public ConstellationBrownie() {
 		ordered = false;
 		name = "Constellation Brownie";
-		brownieBase = "Dark Chocolate Brownie";
+		brownieBase = "Dark Chocolate Brownie Base";
 		fillings = "White Chocolate Chunks as a Constellation Against a Dark Backdrop";
 		
 	}
@@ -23,7 +23,7 @@ public class ConstellationBrownie extends Brownie {
 	//Set the brownie cost
 	public double cost() {
 		
-		return 100.00;
+		return 95.00;
 	}
 	
 	//Place the brownie order

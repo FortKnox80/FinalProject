@@ -8,9 +8,9 @@ public class GooeyChocolateChunkCookie extends Cookie {
 	public GooeyChocolateChunkCookie() {
 		ordered = false;
 		name = "Gooey Chocolate Chunk Cookie";
-		tastyBits = "White Chocolate Chunks";
-		cookieBase = "Soft Lemon Sugar Cookie";
-		toppings = "Lemon Curd";
+		tastyBits = "Milk Chocolate Chunks";
+		cookieBase = "Soft Vanilla Cookie";
+		toppings = "";
 	}
 
 	//A method to bake the cookie

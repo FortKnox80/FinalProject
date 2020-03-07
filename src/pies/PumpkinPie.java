@@ -20,7 +20,7 @@ public class PumpkinPie extends Pie {
 	//Set the pie cost
 	public double cost() {
 		
-		return 100.00;
+		return 70.00;
 	}
 	
 	//Place the pie order

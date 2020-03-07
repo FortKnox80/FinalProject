@@ -8,7 +8,7 @@ public class ChocolateFudgeBrownie extends Brownie {
 	public ChocolateFudgeBrownie() {
 		ordered = false;
 		name = "Chocolate Fudge Brownie";
-		brownieBase = "Rich Chocolate Brownie";
+		brownieBase = "Rich Chocolate Brownie Base";
 		fillings = "Creamy Dark Chocolate Fudge Swirl";
 		
 	}
@@ -23,7 +23,7 @@ public class ChocolateFudgeBrownie extends Brownie {
 	//Set the brownie cost
 	public double cost() {
 		
-		return 100.00;
+		return 95.00;
 	}
 	
 	//Place the brownie order

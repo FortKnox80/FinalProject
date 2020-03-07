@@ -23,10 +23,10 @@ public class PieMenu implements Menu {
 	//Create a new menu item based off of the deserts available
 	public PieMenu() {
 		menuItems = new ArrayList<MenuItem>();
-		addItems(blackberryPie.name, blackberryPie.getPieFlavor(), false, blackberryPie.cost());
-		addItems(pecanPie.name, pecanPie.getPieFlavor(), false, pecanPie.cost());
-		addItems(pumpkinPie.name, pumpkinPie.getPieFlavor(), false, pumpkinPie.cost());
-		addItems(strawberryRhubarbPie.name, strawberryRhubarbPie.getPieFlavor(), false, strawberryRhubarbPie.cost());
+		addItems(blackberryPie.name, blackberryPie.getFlavor(), false, blackberryPie.cost());
+		addItems(pecanPie.name, pecanPie.getFlavor(), false, pecanPie.cost());
+		addItems(pumpkinPie.name, pumpkinPie.getFlavor(), false, pumpkinPie.cost());
+		addItems(strawberryRhubarbPie.name, strawberryRhubarbPie.getFlavor(), false, strawberryRhubarbPie.cost());
 		
 		
 	}

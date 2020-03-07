@@ -20,12 +20,12 @@ public abstract class Macaroon extends Desserts{
 
 	//Get the flavor
 	public String getFlavor() {
-		return "A " + name + " "+ macaroonFlavor + " " + filling + " Macaroon: ";
+		return name + ": Made With a "+ macaroonFlavor + " Base and Stuffed With " + filling;
 	}
 	
 	//Method for ordering a macaroon
 	public boolean dessertOrdered() {
-		System.out.println("Your "+name+ " has been placed");
+		System.out.println("Your "+name+ " order has been placed");
 		ordered = true;
 		return ordered;
 	}

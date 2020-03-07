@@ -8,7 +8,7 @@ public class OrangeCreamMacaroon extends Macaroon {
 	public OrangeCreamMacaroon() {
 		ordered = false;
 		name = "Orange Cream Macaroon";
-		filling = "Delicate Vanilla Buttercream With Orange Rwduction Folded In";
+		filling = "Delicate Vanilla Buttercream With Orange Reduction Folded In";
 		macaroonFlavor = "Clementine Colored Vanilla Macaroon";
 	}
 
@@ -22,7 +22,7 @@ public class OrangeCreamMacaroon extends Macaroon {
 	//Set the macaroon cost
 	public double cost() {
 		
-		return 100.00;
+		return 50.00;
 	}
 	
 	//Place the macaroon order

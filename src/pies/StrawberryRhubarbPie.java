@@ -20,7 +20,7 @@ public class StrawberryRhubarbPie extends Pie {
 	//Set the pie cost
 	public double cost() {
 		
-		return 100.00;
+		return 75.00;
 	}
 	
 	//Place the pie order

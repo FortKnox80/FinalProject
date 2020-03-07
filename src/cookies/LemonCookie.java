@@ -10,7 +10,7 @@ public class LemonCookie extends Cookie {
 		name = "Delicate Lemon Cookie";
 		tastyBits = "White Chocolate Chunks";
 		cookieBase = "Soft Lemon Sugar Cookie";
-		toppings = "Lemon Curd";
+		toppings = "Topped With Lemon Curd";
 	}
 
 	//A method to bake the cookie

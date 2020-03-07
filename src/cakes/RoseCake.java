@@ -5,9 +5,10 @@ public class RoseCake extends Cake {
 	public RoseCake() {
 		ordered = false;
 		name = "Stop and Smell the Roses Cake";
-		filling = "Lemon Curd";
+		filling = "A Delicate Rose Flavored Buttercream";
+		spongeCakeType = "A Light, Pink, Vanilla Flavored Sponge";
 		icingFlavor = "Vanilla Buttercream";
-		fondant = "Soft Yellow Fondant";
+		fondant = " and Soft Pink Fondant";
 	}
 
 	//A method to bake the cake
@@ -20,7 +21,7 @@ public class RoseCake extends Cake {
 	//Set the cake cost
 	public double cost() {
 		
-		return 100.00;
+		return 150.00;
 	}
 	
 	//Place the cake order

@@ -20,12 +20,12 @@ public abstract class Brownie extends Desserts{
 
 	//Get the flavor
 	public String getFlavor() {
-		return "A " + name + " "+ brownieBase + " " + fillings + " Brownie: ";
+		return name + ": A Rich Brownie With A "+ brownieBase + " and Filled With " + fillings;
 	}
 	
 	//Method for ordering a brownie
 	public boolean dessertOrdered() {
-		System.out.println("Your " +name+ " has been placed");
+		System.out.println("Your " +name+ " order has been placed");
 		ordered = true;
 		return ordered;
 	}

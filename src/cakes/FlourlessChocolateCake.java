@@ -8,10 +8,10 @@ public class FlourlessChocolateCake extends Cake {
 	public FlourlessChocolateCake() {
 		ordered = false;
 		name = "Flourless Chocolate Cake";
-		spongeCakeType = "Rich, Fudgey, Chocolate Sponge";
-		filling = "Lemon Curd";
-		icingFlavor = "Vanilla Buttercream";
-		fondant = "Soft Yellow Fondant";
+		spongeCakeType = "Rich, Fudgey, Chocolate Base";
+		filling = "White Chocolate Mousse";
+		icingFlavor = "Dark Chocolate Ganache";
+		fondant = "";
 	}
 
 	//A method to bake the cake
@@ -24,7 +24,7 @@ public class FlourlessChocolateCake extends Cake {
 	//Set the cake cost
 	public double cost() {
 		
-		return 100.00;
+		return 150.00;
 	}
 	
 	//Place the cake order

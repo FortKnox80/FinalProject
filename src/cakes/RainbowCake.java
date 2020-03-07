@@ -1,13 +1,14 @@
 package cakes;
-//A class for lemon cakes
+//A class for rainbow cakes
 public class RainbowCake extends Cake {
 
 	public RainbowCake() {
 		ordered = false;
 		name = "All the Beatiful Colors of the Rainbow Cake";
-		filling = "Lemon Curd";
-		icingFlavor = "Vanilla Buttercream";
-		fondant = "Soft Yellow Fondant";
+		filling = "Bright Raspberry Coulis, and Fresh Whipped Cream";
+		spongeCakeType = "Layered Orange, Lime, Lemon, and Strawberry Sponges";
+		icingFlavor = "Swirled Orange, Lime, Lemon, and Strawberry Buttercream Icings";
+		fondant = "";
 	}
 
 	//A method to bake the cake
@@ -20,7 +21,7 @@ public class RainbowCake extends Cake {
 	//Set the cake cost
 	public double cost() {
 		
-		return 100.00;
+		return 200.00;
 	}
 	
 	//Place the cake order

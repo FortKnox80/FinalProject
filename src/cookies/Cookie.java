@@ -21,12 +21,12 @@ public abstract class Cookie extends Desserts{
 
 	//Get the flavor
 	public String getFlavor() {
-		return "A " + name + " "+cookieBase+ " " + tastyBits + " " + toppings + " Cookie: ";
+		return name + ": Made With "+cookieBase+ " Base and Lots of " + tastyBits + " " + toppings;
 	}
 	
 	//Method for ordering a cookie
 	public boolean dessertOrdered() {
-		System.out.println("Your "+name+ " has been placed");
+		System.out.println("Your "+name+ " order has been placed");
 		ordered = true;
 		return ordered;
 	}

@@ -19,13 +19,13 @@ public abstract class Pie extends Desserts{
 	}
 
 	//Get the flavor
-	public String getPieFlavor() {
-		return "A " + name + " "+ crust + " " + filling + " pie: ";
+	public String getFlavor() {
+		return name + ": Made With a "+ crust + " and Filled With " + filling;
 	}
 	
 	//Method for ordering a pie
 	public boolean dessertOrdered() {
-		System.out.println("Your "+name+ " has been placed");
+		System.out.println("Your "+name+ " order has been placed");
 		ordered = true;
 		return ordered;
 	}

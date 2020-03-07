@@ -22,12 +22,12 @@ public abstract class Cake extends Desserts {
 
 	//Get the cake flavor
 	public String getFlavor() {
-		return "A " + name + " " + spongeCakeType+ " "+ filling+ " " + icingFlavor+ " Cake: ";
+		return name + ": A Cake With a " + spongeCakeType+ " Base and "+ filling+ " Layers. All Topped With " + icingFlavor + " " + fondant;
 	}
 	
 	//Method for ordering a cake
 	public boolean dessertOrdered() {
-		System.out.println("Your "+name+ " has been placed");
+		System.out.println("Your "+name+ " order has been placed");
 		ordered = true;
 		return ordered;
 	}
