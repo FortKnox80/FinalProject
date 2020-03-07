@@ -20,10 +20,10 @@ public class POSConsole extends POSCenter {
 	Brownie constellationBrownie = new ConstellationBrownie();
 	Brownie whiteChocolateSwirlBrownie = new WhiteChocolateSwirlBrownie(); 
 	
-	final static int blondieB = 0;
-	final static int fudgeB = 1;
-	final static int constB = 2;
-	final static int swirlB = 3;
+	final int blondieB = 0;
+	final int fudgeB = 1;
+	final int constB = 2;
+	final int swirlB = 3;
 	
 	//Set all the cakes
 	Cake flourlessChocolateCake = new FlourlessChocolateCake();
@@ -34,23 +34,26 @@ public class POSConsole extends POSCenter {
 	Cake roseCake = new RoseCake();
 	Cake vanillaBeanCake = new VanillaBeanCake(); 
 	
-	final static int chocC = 4;
-	final static int galaxyC = 5;
-	final static int lemonC = 6;
-	final static int champC = 7;
-	final static int rainC = 8;
-	final static int vanC = 9;
+	final int chocC = 4;
+	final int galaxyC = 5;
+	final int lemonC = 6;
+	final int champC = 7;
+	final int rainC = 8;
+	final int roseC = 9;
+	final int vanC = 10;
 	
 	//Set all the cheesecakes
 	Cheesecake blackberryCheesecake = new BlackberryCheesecake(); 
 	Cheesecake blueberryCheesecake = new BlueberryCheesecake();
 	Cheesecake raspberryDelightCheesecake = new RaspberryDelightCheesecake();
 	Cheesecake strawberryCheesecake = new StrawberryCheesecake();
+	Cheesecake decadentChocolateCheesecake = new DecadentChocolateCheesecake();
 	
-	final static int blackCC = 10;
-	final static int  blueCC = 11;
-	final static int raspCC = 12;
-	final static int sttrawCC = 13;
+	final int blackCC = 11;
+	final int  blueCC = 12;
+	final int raspCC = 13;
+	final int strawCC = 14;
+	final int chocCC = 29;
 	
 	//Set all the cookies
 	Cookie frostedSugarCookie = new FrostedSugarCookie();
@@ -58,10 +61,10 @@ public class POSConsole extends POSCenter {
 	Cookie lavenderBlueberryCookie = new LavenderBlueberryCookie();
 	Cookie lemonCookie = new LemonCookie();
 	
-	final static int frostedCK = 14;
-	final static int  chocCK = 15;
-	final static int lavCK = 16;
-	final static int lemonCK = 17;
+	final int frostedCK = 15;
+	final int  chocCK = 16;
+	final int lavCK = 17;
+	final int lemonCK = 18;
 	
 	//Set the macaroons
 	Macaroon lavenderMacaroon = new LavenderMacaroon();
@@ -69,14 +72,27 @@ public class POSConsole extends POSCenter {
 	Macaroon orangeCreamMacaroon = new OrangeCreamMacaroon();
 	Macaroon raspberryMacaroon = new RaspberryMacaroon();
 	Macaroon strawberryMacaroon = new StrawberryMacaroon();
-	Macaroon	vanillaMacaroon = new	VanillaMacaroon();
+	Macaroon vanillaMacaroon = new	VanillaMacaroon();
+	
+	final int lavM = 19;
+	final int lemonM = 20;
+	final int orangeM = 21;
+	final int raspM = 22;
+	final int strawM = 23;
+	final int  vanM  = 24;
+	
 	
 	//Set the pies
+	
 	Pie blackberryPie = new BlackberryPie();
 	Pie pecanPie = new PecanPie();
 	Pie pumpkinPie = new PumpkinPie();
 	Pie strawberryRhubarbPie = new StrawberryRhubarbPie();
 	
+	final int blackP = 25;
+	final int pecanP = 26;
+	final int pumpP = 27;
+	final int strawRP = 28;
 	
 	PlaceCakeOrderCommand placeLemonCakeOrder = new PlaceCakeOrderCommand(lemonCake);
 	CancelCakeOrderCommand cancelLemonCakeOrder = new CancelCakeOrderCommand(lemonCake);
@@ -170,36 +186,42 @@ public class POSConsole extends POSCenter {
 	
 	public POSConsole() {
 		
-		pos.setCommand(0, placeLemonCakeOrder, cancelLemonCakeOrder);
-		pos.setCommand(2, placeFlourlessChocolateCakeOrder, cancelFlourlessChocolateCakeCakeOrder);
-		pos.setCommand(3, placeGalaxyCakeOrder, cancelGalaxyCakeOrder);
-		pos.setCommand(4, placePinkChampagneCakeOrder, cancelPinkChampagneCakeOrder);
-		pos.setCommand(5, placeRainbowCakeOrder, cancelRainbowCakeOrder);
-		pos.setCommand(6, placeRoseCakeOrder, cancelRoseCakeOrder);
-		pos.setCommand(7, placeVanillaBeanCakeOrder, cancelVanillaBeanCakeOrder);
-		pos.setCommand(8, placeBlondieBrownieOrder, cancelBlondieBrownieOrder);
-		pos.setCommand(9, placeChocolateFudgeBrownieOrder, cancelChocolateFudgeBrownieOrder);
-		pos.setCommand(10, placeWhiteChocolateSwirlBrownieOrder, cancelWhiteChocolateSwirlBrownieOrder);
-		pos.setCommand(11, placeBlackberryCheesecakeOrder, cancelBlackberryCheesecakeOrder);
-		pos.setCommand(12, placeDecadentChocolateCheesecakeOrder, cancelDecadentChocolateCheesecakeOrder);
-		pos.setCommand(13, placeRaspberryDelightCheesecakeOrder, cancelRaspberryDelightCheesecakeOrder);
-		pos.setCommand(14, placeStrawberryCheesecakeOrder, cancelStrawberryCheesecakeOrder);
-		pos.setCommand(15, placeFrostedSugarCookieOrder, cancelFrostedSugarCookieOrder);
-		pos.setCommand(16, placeGooeyChocolateChunkCookieOrder, cancelGooeyChocolateChunkCookieOrder);
-		pos.setCommand(17, placeLavenderBlueberryCookieOrder, cancelLavenderBlueberryCookieOrder);
-		pos.setCommand(18, placeLemonCookieOrder, cancelLemonCookieOrder);
-		pos.setCommand(19, placeLavenderMacaroonOrder, cancelLavenderMacaroonOrder);
-		pos.setCommand(20, placeLemonMacaroonOrder, cancelLemonMacaroonOrder);
-		pos.setCommand(21, placeOrangeCreamMacaroonOrder, cancelOrangeCreamMacaroonOrder);
-		pos.setCommand(22, placeRaspberryMacaroonOrder, cancelRaspberryMacaroonOrder);
-		pos.setCommand(23, placeStrawberryMacaroonOrder, cancelStrawberryMacaroonOrder);
-		pos.setCommand(24, placeVanillaMacaroonOrder, cancelVanillaMacaroonOrder);
-		pos.setCommand(25, placeBlackberryPieOrder, cancelBlackberryPieOrder);
-		pos.setCommand(26, placePecanPieOrder, cancelPecanPieOrder);
-		pos.setCommand(27, placePumpkinPieOrder, cancelPumpkinPieOrder);
-		pos.setCommand(28, placeStrawberryRhubarbPieOrder, cancelStrawberryRhubarbPieOrder);
-		pos.setCommand(29, placeConstellationBrownieOrder, cancelConstellationBrownieOrder);
-		pos.setCommand(30, placeBlueberryCheesecakeOrder, cancelBlueberryCheesecakeOrder);
+		pos.setCommand(lemonC, placeLemonCakeOrder, cancelLemonCakeOrder);
+		pos.setCommand(chocC, placeFlourlessChocolateCakeOrder, cancelFlourlessChocolateCakeCakeOrder);
+		pos.setCommand(galaxyC, placeGalaxyCakeOrder, cancelGalaxyCakeOrder);
+		pos.setCommand(champC, placePinkChampagneCakeOrder, cancelPinkChampagneCakeOrder);
+		pos.setCommand(rainC, placeRainbowCakeOrder, cancelRainbowCakeOrder);
+		pos.setCommand(roseC, placeRoseCakeOrder, cancelRoseCakeOrder);
+		pos.setCommand(vanC, placeVanillaBeanCakeOrder, cancelVanillaBeanCakeOrder);
+		
+		pos.setCommand(blondieB, placeBlondieBrownieOrder, cancelBlondieBrownieOrder);
+		pos.setCommand(fudgeB, placeChocolateFudgeBrownieOrder, cancelChocolateFudgeBrownieOrder);
+		pos.setCommand(swirlB, placeWhiteChocolateSwirlBrownieOrder, cancelWhiteChocolateSwirlBrownieOrder);
+		pos.setCommand(constB, placeConstellationBrownieOrder, cancelConstellationBrownieOrder);
+		
+		
+		pos.setCommand(blackCC, placeBlackberryCheesecakeOrder, cancelBlackberryCheesecakeOrder);
+		pos.setCommand(chocCC, placeDecadentChocolateCheesecakeOrder, cancelDecadentChocolateCheesecakeOrder);
+		pos.setCommand(raspCC, placeRaspberryDelightCheesecakeOrder, cancelRaspberryDelightCheesecakeOrder);
+		pos.setCommand(strawCC, placeStrawberryCheesecakeOrder, cancelStrawberryCheesecakeOrder);
+		pos.setCommand(blueCC, placeBlueberryCheesecakeOrder, cancelBlueberryCheesecakeOrder);
+		
+		pos.setCommand(frostedCK, placeFrostedSugarCookieOrder, cancelFrostedSugarCookieOrder);
+		pos.setCommand(chocCK, placeGooeyChocolateChunkCookieOrder, cancelGooeyChocolateChunkCookieOrder);
+		pos.setCommand(lavCK, placeLavenderBlueberryCookieOrder, cancelLavenderBlueberryCookieOrder);
+		pos.setCommand(lemonCK, placeLemonCookieOrder, cancelLemonCookieOrder);
+		
+		pos.setCommand(lavM, placeLavenderMacaroonOrder, cancelLavenderMacaroonOrder);
+		pos.setCommand(lemonM, placeLemonMacaroonOrder, cancelLemonMacaroonOrder);
+		pos.setCommand(orangeM, placeOrangeCreamMacaroonOrder, cancelOrangeCreamMacaroonOrder);
+		pos.setCommand(raspM, placeRaspberryMacaroonOrder, cancelRaspberryMacaroonOrder);
+		pos.setCommand(strawM, placeStrawberryMacaroonOrder, cancelStrawberryMacaroonOrder);
+		pos.setCommand(vanM, placeVanillaMacaroonOrder, cancelVanillaMacaroonOrder);
+		
+		pos.setCommand(blackP, placeBlackberryPieOrder, cancelBlackberryPieOrder);
+		pos.setCommand(pecanP, placePecanPieOrder, cancelPecanPieOrder);
+		pos.setCommand(pumpP, placePumpkinPieOrder, cancelPumpkinPieOrder);
+		pos.setCommand(strawRP, placeStrawberryRhubarbPieOrder, cancelStrawberryRhubarbPieOrder);
 	}
 	
 	public void orderButtonPushed(int slot) {
