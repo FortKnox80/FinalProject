@@ -2,160 +2,172 @@ package dessertShop;
 
 
 import brownies.*;
+import cakeDecoarations.*;
 import cakes.*;
 import cheesecakes.*;
 import cookies.*;
-import decorations.*;
 import macaroons.*;
 import pies.*;
-
-
-import commands.CancelOrderCommand;
-import commands.PlaceCakeOrderCommand;
-import commands.PlaceOrderCommand;
+import commands.*;
 
 public class POSConsole extends POSCenter {
 	
 	POSCenter pos = new POSCenter();
 	
 	//Set all the brownies
-	BlondieBrownie blondieBrownie = new BlondieBrownie();
-	ChocolateFudgeBrownie chocolateFudgeBrownie = new ChocolateFudgeBrownie();
-	ConstellationBrownie constellationBrownie = new ConstellationBrownie();
-	WhiteChocolateSwirlBrownie whiteChocolateSwirlBrownie = new WhiteChocolateSwirlBrownie(); 
+	Brownie blondieBrownie = new BlondieBrownie();
+	Brownie chocolateFudgeBrownie = new ChocolateFudgeBrownie();
+	Brownie constellationBrownie = new ConstellationBrownie();
+	Brownie whiteChocolateSwirlBrownie = new WhiteChocolateSwirlBrownie(); 
+	
+	final static int blondieB = 0;
+	final static int fudgeB = 1;
+	final static int constB = 2;
+	final static int swirlB = 3;
 	
 	//Set all the cakes
-	FlourlessChocolateCake flourlessChocolateCake = new FlourlessChocolateCake();
-	GalaxyCake galaxyCake = new GalaxyCake();
-	LemonCake lemonCake = new LemonCake();
-	PinkChampagneCake pinkChampagneCake = new PinkChampagneCake(); 
-	RainbowCake rainbowCake = new RainbowCake();
-	RoseCake roseCake = new RoseCake();
-	VanillaBeanCake vanillaBeanCake = new VanillaBeanCake(); 
+	Cake flourlessChocolateCake = new FlourlessChocolateCake();
+	Cake galaxyCake = new GalaxyCake();
+	Cake lemonCake = new LemonCake();
+	Cake pinkChampagneCake = new PinkChampagneCake(); 
+	Cake rainbowCake = new RainbowCake();
+	Cake roseCake = new RoseCake();
+	Cake vanillaBeanCake = new VanillaBeanCake(); 
+	
+	final static int chocC = 4;
+	final static int galaxyC = 5;
+	final static int lemonC = 6;
+	final static int champC = 7;
+	final static int rainC = 8;
+	final static int vanC = 9;
 	
 	//Set all the cheesecakes
-	BlackberryCheesecake blackberryCheesecake = new BlackberryCheesecake(); 
-	BlueberryCheesecake blueberryCheesecake = new BlueberryCheesecake();
-	DecadentChocolateCheesecake decadentChocolateCheesecake = new DecadentChocolateCheesecake();
-	RaspberryDelightCheesecake raspberryDelightCheesecake = new RaspberryDelightCheesecake();
-	StrawberryCheesecake strawberryCheesecake = new StrawberryCheesecake();
+	Cheesecake blackberryCheesecake = new BlackberryCheesecake(); 
+	Cheesecake blueberryCheesecake = new BlueberryCheesecake();
+	Cheesecake raspberryDelightCheesecake = new RaspberryDelightCheesecake();
+	Cheesecake strawberryCheesecake = new StrawberryCheesecake();
+	
+	final static int blackCC = 10;
+	final static int  blueCC = 11;
+	final static int raspCC = 12;
+	final static int sttrawCC = 13;
 	
 	//Set all the cookies
-	FrostedSugarCookie frostedSugarCookie = new FrostedSugarCookie();
-	GooeyChocolateChunkCookie gooeyChocolateChunkCookie = new GooeyChocolateChunkCookie();
-	LavenderBlueberryCookie lavenderBlueberryCookie = new LavenderBlueberryCookie();
-	LemonCookie lemonCookie = new LemonCookie();
+	Cookie frostedSugarCookie = new FrostedSugarCookie();
+	Cookie gooeyChocolateChunkCookie = new GooeyChocolateChunkCookie();
+	Cookie lavenderBlueberryCookie = new LavenderBlueberryCookie();
+	Cookie lemonCookie = new LemonCookie();
+	
+	final static int frostedCK = 14;
+	final static int  chocCK = 15;
+	final static int lavCK = 16;
+	final static int lemonCK = 17;
 	
 	//Set the macaroons
-	LavenderMacaroon lavenderMacaroon = new LavenderMacaroon();
-	LemonMacaroon lemonMacaroon = new LemonMacaroon ();
-	OrangeCreamMacaroon orangeCreamMacaroon = new OrangeCreamMacaroon();
-	RaspberryMacaroon raspberryMacaroon = new RaspberryMacaroon();
-	StrawberryMacaroon strawberryMacaroon = new StrawberryMacaroon();
-	VanillaMacaroon	vanillaMacaroon = new	VanillaMacaroon();
+	Macaroon lavenderMacaroon = new LavenderMacaroon();
+	Macaroon lemonMacaroon = new LemonMacaroon ();
+	Macaroon orangeCreamMacaroon = new OrangeCreamMacaroon();
+	Macaroon raspberryMacaroon = new RaspberryMacaroon();
+	Macaroon strawberryMacaroon = new StrawberryMacaroon();
+	Macaroon	vanillaMacaroon = new	VanillaMacaroon();
 	
 	//Set the pies
-	BlackberryPie blackberryPie = new BlackberryPie();
-	PecanPie pecanPie = new PecanPie();
-	PumpkinPie pumpkinPie = new PumpkinPie();
-	StrawberryRhubarbPie strawberryRhubarbPie = new StrawberryRhubarbPie();
+	Pie blackberryPie = new BlackberryPie();
+	Pie pecanPie = new PecanPie();
+	Pie pumpkinPie = new PumpkinPie();
+	Pie strawberryRhubarbPie = new StrawberryRhubarbPie();
 	
 	
+	PlaceCakeOrderCommand placeLemonCakeOrder = new PlaceCakeOrderCommand(lemonCake);
+	CancelCakeOrderCommand cancelLemonCakeOrder = new CancelCakeOrderCommand(lemonCake);
 	
-	PlaceOrderCommand placeLemonCakeOrder = new PlaceOrderCommand(lemonCake);
-	CancelOrderCommand cancelLemonCakeOrder = new CancelOrderCommand(lemonCake);
+	PlaceCakeOrderCommand placeFlourlessChocolateCakeOrder = new PlaceCakeOrderCommand(flourlessChocolateCake);
+	CancelCakeOrderCommand cancelFlourlessChocolateCakeCakeOrder = new CancelCakeOrderCommand(flourlessChocolateCake);
 	
-	PlaceOrderCommand placeFlourlessChocolateCakeOrder = new PlaceOrderCommand(flourlessChocolateCake);
-	CancelOrderCommand cancelFlourlessChocolateCakeCakeOrder = new CancelOrderCommand(flourlessChocolateCake);
+	PlaceCakeOrderCommand placeGalaxyCakeOrder = new PlaceCakeOrderCommand(galaxyCake);
+	CancelCakeOrderCommand cancelGalaxyCakeOrder = new CancelCakeOrderCommand(galaxyCake);
 	
-	PlaceOrderCommand placeGalaxyCakeOrder = new PlaceOrderCommand(galaxyCake);
-	CancelOrderCommand cancelGalaxyCakeOrder = new CancelOrderCommand(galaxyCake);
+	PlaceCakeOrderCommand placePinkChampagneCakeOrder = new PlaceCakeOrderCommand(pinkChampagneCake);
+	CancelCakeOrderCommand cancelPinkChampagneCakeOrder = new CancelCakeOrderCommand(pinkChampagneCake);
 	
-	PlaceOrderCommand placePinkChampagneCakeOrder = new PlaceOrderCommand(pinkChampagneCake);
-	CancelOrderCommand cancelPinkChampagneCakeOrder = new CancelOrderCommand(pinkChampagneCake);
+	PlaceCakeOrderCommand placeRainbowCakeOrder = new PlaceCakeOrderCommand(rainbowCake);
+	CancelCakeOrderCommand cancelRainbowCakeOrder = new CancelCakeOrderCommand(rainbowCake);
 	
-	PlaceOrderCommand placeRainbowCakeOrder = new PlaceOrderCommand(rainbowCake);
-	CancelOrderCommand cancelRainbowCakeOrder = new CancelOrderCommand(rainbowCake);
+	PlaceCakeOrderCommand placeRoseCakeOrder = new PlaceCakeOrderCommand(roseCake);
+	CancelCakeOrderCommand cancelRoseCakeOrder = new CancelCakeOrderCommand(roseCake);
 	
-	PlaceOrderCommand placeRoseCakeOrder = new PlaceOrderCommand(roseCake);
-	CancelOrderCommand cancelRoseCakeOrder = new CancelOrderCommand(roseCake);
+	PlaceCakeOrderCommand placeVanillaBeanCakeOrder = new PlaceCakeOrderCommand(vanillaBeanCake);
+	CancelCakeOrderCommand cancelVanillaBeanCakeOrder = new CancelCakeOrderCommand(vanillaBeanCake);
 	
-	PlaceOrderCommand placeVanillaBeanCakeOrder = new PlaceOrderCommand(vanillaBeanCake);
-	CancelOrderCommand cancelVanillaBeanCakeOrder = new CancelOrderCommand(vanillaBeanCake);
+	PlaceBrownieOrderCommand placeBlondieBrownieOrder = new PlaceBrownieOrderCommand(blondieBrownie);
+	CancelBrownieOrderCommand cancelBlondieBrownieOrder = new CancelBrownieOrderCommand(blondieBrownie);
 	
-	PlaceOrderCommand placeBlondieBrownieOrder = new PlaceOrderCommand(blondieBrownie);
-	CancelOrderCommand cancelBlondieBrownieOrder = new CancelOrderCommand(blondieBrownie);
+	PlaceBrownieOrderCommand placeChocolateFudgeBrownieOrder = new PlaceBrownieOrderCommand(chocolateFudgeBrownie);
+	CancelBrownieOrderCommand cancelChocolateFudgeBrownieOrder = new CancelBrownieOrderCommand(chocolateFudgeBrownie);
 	
-	PlaceOrderCommand placeChocolateFudgeBrownieOrder = new PlaceOrderCommand(chocolateFudgeBrownie);
-	CancelOrderCommand cancelChocolateFudgeBrownieOrder = new CancelOrderCommand(chocolateFudgeBrownie);
+	PlaceBrownieOrderCommand placeConstellationBrownieOrder = new PlaceBrownieOrderCommand(constellationBrownie);
+	CancelBrownieOrderCommand cancelConstellationBrownieOrder = new CancelBrownieOrderCommand(constellationBrownie);
 	
-	PlaceOrderCommand placeConstellationBrownieOrder = new PlaceOrderCommand(constellationBrownie);
-	CancelOrderCommand cancelConstellationBrownieOrder = new CancelOrderCommand(constellationBrownie);
+	PlaceBrownieOrderCommand placeWhiteChocolateSwirlBrownieOrder = new PlaceBrownieOrderCommand(whiteChocolateSwirlBrownie);
+	CancelBrownieOrderCommand cancelWhiteChocolateSwirlBrownieOrder = new CancelBrownieOrderCommand(whiteChocolateSwirlBrownie);
 	
-	PlaceOrderCommand placeWhiteChocolateSwirlBrownieOrder = new PlaceOrderCommand(whiteChocolateSwirlBrownie);
-	CancelOrderCommand cancelWhiteChocolateSwirlBrownieOrder = new CancelOrderCommand(whiteChocolateSwirlBrownie);
+	PlaceCheesecakeOrderCommand placeBlackberryCheesecakeOrder = new PlaceCheesecakeOrderCommand(blackberryCheesecake);
+	CancelCheesecakeOrderCommand cancelBlackberryCheesecakeOrder = new CancelCheesecakeOrderCommand(blackberryCheesecake);
 	
-	PlaceOrderCommand placeBlackberryCheesecakeOrder = new PlaceOrderCommand(blackberryCheesecake);
-	CancelOrderCommand cancelBlackberryCheesecakeOrder = new CancelOrderCommand(blackberryCheesecake);
+	PlaceCheesecakeOrderCommand placeBlueberryCheesecakeOrder = new PlaceCheesecakeOrderCommand(blueberryCheesecake);
+	CancelCheesecakeOrderCommand cancelBlueberryCheesecakeOrder = new CancelCheesecakeOrderCommand(blueberryCheesecake);
 	
-	PlaceOrderCommand placeBlueberryCheesecakeOrder = new PlaceOrderCommand(blueberryCheesecake);
-	CancelOrderCommand cancelBlueberryCheesecakeOrder = new CancelOrderCommand(blueberryCheesecake);
+	PlaceCheesecakeOrderCommand placeDecadentChocolateCheesecakeOrder = new PlaceCheesecakeOrderCommand(decadentChocolateCheesecake);
+	CancelCheesecakeOrderCommand cancelDecadentChocolateCheesecakeOrder = new CancelCheesecakeOrderCommand(decadentChocolateCheesecake);
 	
-	PlaceOrderCommand placeDecadentChocolateCheesecakeOrder = new PlaceOrderCommand(decadentChocolateCheesecake);
-	CancelOrderCommand cancelDecadentChocolateCheesecakeOrder = new CancelOrderCommand(decadentChocolateCheesecake);
+	PlaceCheesecakeOrderCommand placeRaspberryDelightCheesecakeOrder = new PlaceCheesecakeOrderCommand(raspberryDelightCheesecake);
+	CancelCheesecakeOrderCommand cancelRaspberryDelightCheesecakeOrder = new CancelCheesecakeOrderCommand(raspberryDelightCheesecake);
 	
-	PlaceOrderCommand placeRaspberryDelightCheesecakeOrder = new PlaceOrderCommand(raspberryDelightCheesecake);
-	CancelOrderCommand cancelRaspberryDelightCheesecakeOrder = new CancelOrderCommand(raspberryDelightCheesecake);
+	PlaceCheesecakeOrderCommand placeStrawberryCheesecakeOrder = new PlaceCheesecakeOrderCommand(strawberryCheesecake);
+	CancelCheesecakeOrderCommand cancelStrawberryCheesecakeOrder = new CancelCheesecakeOrderCommand(strawberryCheesecake);
 	
-	PlaceOrderCommand placeStrawberryCheesecakeOrder = new PlaceOrderCommand(strawberryCheesecake);
-	CancelOrderCommand cancelStrawberryCheesecakeOrder = new CancelOrderCommand(strawberryCheesecake);
+	PlaceCookieOrderCommand placeFrostedSugarCookieOrder = new PlaceCookieOrderCommand(frostedSugarCookie);
+	CancelCookieOrderCommand cancelFrostedSugarCookieOrder = new CancelCookieOrderCommand(frostedSugarCookie);
 	
-	PlaceOrderCommand placeFrostedSugarCookieOrder = new PlaceOrderCommand(frostedSugarCookie);
-	CancelOrderCommand cancelFrostedSugarCookieOrder = new CancelOrderCommand(frostedSugarCookie);
+	PlaceCookieOrderCommand placeGooeyChocolateChunkCookieOrder = new PlaceCookieOrderCommand(gooeyChocolateChunkCookie);
+	CancelCookieOrderCommand cancelGooeyChocolateChunkCookieOrder = new CancelCookieOrderCommand(gooeyChocolateChunkCookie);
 	
-	PlaceOrderCommand placeGooeyChocolateChunkCookieOrder = new PlaceOrderCommand(gooeyChocolateChunkCookie);
-	CancelOrderCommand cancelGooeyChocolateChunkCookieOrder = new CancelOrderCommand(gooeyChocolateChunkCookie);
+	PlaceCookieOrderCommand placeLavenderBlueberryCookieOrder = new PlaceCookieOrderCommand(lavenderBlueberryCookie);
+	CancelCookieOrderCommand cancelLavenderBlueberryCookieOrder = new CancelCookieOrderCommand(lavenderBlueberryCookie);
 	
-	PlaceOrderCommand placeLavenderBlueberryCookieOrder = new PlaceOrderCommand(lavenderBlueberryCookie);
-	CancelOrderCommand cancelLavenderBlueberryCookieOrder = new CancelOrderCommand(lavenderBlueberryCookie);
+	PlaceCookieOrderCommand placeLemonCookieOrder = new PlaceCookieOrderCommand(lemonCookie);
+	CancelCookieOrderCommand cancelLemonCookieOrder = new CancelCookieOrderCommand(lemonCookie);
 	
-	PlaceOrderCommand placeLemonCookieOrder = new PlaceOrderCommand(lemonCookie);
-	CancelOrderCommand cancelLemonCookieOrder = new CancelOrderCommand(lemonCookie);
+	PlaceMacaroonOrderCommand placeLavenderMacaroonOrder = new PlaceMacaroonOrderCommand(lavenderMacaroon);
+	CancelMacaroonOrderCommand cancelLavenderMacaroonOrder = new CancelMacaroonOrderCommand(lavenderMacaroon);
 	
-	PlaceOrderCommand placeLavenderMacaroonOrder = new PlaceOrderCommand(lavenderMacaroon);
-	CancelOrderCommand cancelLavenderMacaroonOrder = new CancelOrderCommand(lavenderMacaroon);
+	PlaceMacaroonOrderCommand placeLemonMacaroonOrder = new PlaceMacaroonOrderCommand(lemonMacaroon);
+	CancelMacaroonOrderCommand cancelLemonMacaroonOrder = new CancelMacaroonOrderCommand(lemonMacaroon);
 	
-	PlaceOrderCommand placeLemonMacaroonOrder = new PlaceOrderCommand(lemonMacaroon);
-	CancelOrderCommand cancelLemonMacaroonOrder = new CancelOrderCommand(lemonMacaroon);
+	PlaceMacaroonOrderCommand placeOrangeCreamMacaroonOrder = new PlaceMacaroonOrderCommand(orangeCreamMacaroon);
+	CancelMacaroonOrderCommand cancelOrangeCreamMacaroonOrder = new CancelMacaroonOrderCommand(orangeCreamMacaroon);
 	
-	PlaceOrderCommand placeOrangeCreamMacaroonOrder = new PlaceOrderCommand(orangeCreamMacaroon);
-	CancelOrderCommand cancelOrangeCreamMacaroonOrder = new CancelOrderCommand(orangeCreamMacaroon);
-	
-	PlaceOrderCommand placeRaspberryMacaroonOrder = new PlaceOrderCommand(raspberryMacaroon);
-	CancelOrderCommand cancelRaspberryMacaroonOrder = new CancelOrderCommand(raspberryMacaroon);
+	PlaceMacaroonOrderCommand placeRaspberryMacaroonOrder = new PlaceMacaroonOrderCommand(raspberryMacaroon);
+	CancelMacaroonOrderCommand cancelRaspberryMacaroonOrder = new CancelMacaroonOrderCommand(raspberryMacaroon);
 
-	PlaceOrderCommand placeStrawberryMacaroonOrder = new PlaceOrderCommand(strawberryMacaroon);
-	CancelOrderCommand cancelStrawberryMacaroonOrder = new CancelOrderCommand(strawberryMacaroon);
+	PlaceMacaroonOrderCommand placeStrawberryMacaroonOrder = new PlaceMacaroonOrderCommand(strawberryMacaroon);
+	CancelMacaroonOrderCommand cancelStrawberryMacaroonOrder = new CancelMacaroonOrderCommand(strawberryMacaroon);
 	
-	PlaceOrderCommand placeVanillaMacaroonOrder = new PlaceOrderCommand(vanillaMacaroon);
-	CancelOrderCommand cancelVanillaMacaroonOrder = new CancelOrderCommand(vanillaMacaroon);
+	PlaceMacaroonOrderCommand placeVanillaMacaroonOrder = new PlaceMacaroonOrderCommand(vanillaMacaroon);
+	CancelMacaroonOrderCommand cancelVanillaMacaroonOrder = new CancelMacaroonOrderCommand(vanillaMacaroon);
 	
-	PlaceOrderCommand placeBlackberryPieOrder = new PlaceOrderCommand(blackberryPie);
-	CancelOrderCommand cancelBlackberryPieOrder = new CancelOrderCommand(blackberryPie);
+	PlacePieOrderCommand placeBlackberryPieOrder = new PlacePieOrderCommand(blackberryPie);
+	CancelPieOrderCommand cancelBlackberryPieOrder = new CancelPieOrderCommand(blackberryPie);
 	
-	PlaceOrderCommand placePecanPieOrder = new PlaceOrderCommand(pecanPie);
-	CancelOrderCommand cancelPecanPieOrder = new CancelOrderCommand(pecanPie);
+	PlacePieOrderCommand placePecanPieOrder = new PlacePieOrderCommand(pecanPie);
+	CancelPieOrderCommand cancelPecanPieOrder = new CancelPieOrderCommand(pecanPie);
 	
-	PlaceOrderCommand placePumpkinPieOrder = new PlaceOrderCommand(pumpkinPie);
-	CancelOrderCommand cancelPumpkinPieOrder = new CancelOrderCommand(pumpkinPie);
+	PlacePieOrderCommand placePumpkinPieOrder = new PlacePieOrderCommand(pumpkinPie);
+	CancelPieOrderCommand cancelPumpkinPieOrder = new CancelPieOrderCommand(pumpkinPie);
 	
-	PlaceOrderCommand placeStrawberryRhubarbPieOrder = new PlaceOrderCommand(strawberryRhubarbPie);
-	CancelOrderCommand cancelStrawberryRhubarbPieOrder = new CancelOrderCommand(strawberryRhubarbPie);
+	PlacePieOrderCommand placeStrawberryRhubarbPieOrder = new PlacePieOrderCommand(strawberryRhubarbPie);
+	CancelPieOrderCommand cancelStrawberryRhubarbPieOrder = new CancelPieOrderCommand(strawberryRhubarbPie);
 	
-	
-	
-	
-
 	public POSConsole() {
 		
 		pos.setCommand(0, placeLemonCakeOrder, cancelLemonCakeOrder);
@@ -191,9 +203,10 @@ public class POSConsole extends POSCenter {
 	}
 	
 	public void orderButtonPushed(int slot) {
-		pos.orderButtonPushed(slot);
+		 pos.orderButtonPushed(slot);
 	}
 
+	
 	public void cancelOrderButtonPushed(int slot) {
 		pos.cancelOrderButtonPushed(slot);
 	}

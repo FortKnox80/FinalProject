@@ -1,5 +1,6 @@
 package dessertShop;
 
+import cakes.*;
 import commands.Command;
 import commands.NoCommand;
 
@@ -35,12 +36,12 @@ public class POSCenter {
 
 	//A method for setting a button as a button for a particular command
 	public void setCommand(int button, Command placeOrderCommand, Command cancelOrderCommand) {
-
 		placeOrder[button] = placeOrderCommand;
 		//If the button is pressed again, cancel the order
 		cancelOrder[button] = cancelOrderCommand;
 	}
 
+	
 	//A method for executing the order of the specified item
 	public void orderButtonPushed(int slot) {
 		placeOrder[slot].execute();

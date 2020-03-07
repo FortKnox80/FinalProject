@@ -7,9 +7,15 @@ public abstract class Desserts {
 	public String name;
 
 	
-	//Get the cake name
+	//Get the dessert name
 	public String getName() {
 		return name;
+	}
+	
+	public boolean dessertOrdered() {
+		System.out.println("Your "+name+ " has been placed");
+		ordered = true;
+		return ordered;
 	}
 	
 	public abstract double cost();

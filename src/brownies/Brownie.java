@@ -24,8 +24,8 @@ public abstract class Brownie extends Desserts{
 	}
 	
 	//Method for ordering a brownie
-	public boolean brownieOrdered() {
-		System.out.println("Your order has been placed");
+	public boolean dessertOrdered() {
+		System.out.println("Your " +name+ " has been placed");
 		ordered = true;
 		return ordered;
 	}

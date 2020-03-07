@@ -26,8 +26,8 @@ public abstract class Cake extends Desserts {
 	}
 	
 	//Method for ordering a cake
-	public boolean cakeOrdered() {
-		System.out.println("Your order has been placed");
+	public boolean dessertOrdered() {
+		System.out.println("Your "+name+ " has been placed");
 		ordered = true;
 		return ordered;
 	}

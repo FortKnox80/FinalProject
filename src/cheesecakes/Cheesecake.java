@@ -25,7 +25,7 @@ public abstract class Cheesecake extends Desserts{
 	}
 	
 	//Method for ordering a cookie
-	public boolean cheeseCakeOrdered() {
+	public boolean cheesecakeOrdered() {
 		System.out.println("Your order has been placed");
 		ordered = true;
 		return ordered;

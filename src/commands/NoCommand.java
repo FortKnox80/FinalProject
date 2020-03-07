@@ -1,13 +1,13 @@
 package commands;
 
+import dessertShop.Desserts;
+
 public class NoCommand implements Command {
 
-	public void execute() {
-		
-	}
+	Desserts dessertType;
+	
+	public void execute() {}
 
-	public void undo() {
-		
-	}
+	public void undo() {}
 
 }

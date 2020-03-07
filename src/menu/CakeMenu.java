@@ -39,7 +39,7 @@ public class CakeMenu implements Menu {
 	public void addItems(String name, String description, boolean glutenFree, double cost) {
 		MenuItem newItem = new MenuItem(name, description, glutenFree, cost);
 		if(numberOfItems >= MENU_ITEM_MAX) {
-			System.err.println("Sorry, if we add anything more to our menu he quality will suffer.");
+			System.err.println("Sorry, if we add anything more to our menu the quality will suffer.");
 		} else {
 			menuItems.add(newItem);
 			numberOfItems = numberOfItems += 1;

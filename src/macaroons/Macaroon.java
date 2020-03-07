@@ -24,8 +24,8 @@ public abstract class Macaroon extends Desserts{
 	}
 	
 	//Method for ordering a macaroon
-	public boolean macaroonOrdered() {
-		System.out.println("Your order has been placed");
+	public boolean dessertOrdered() {
+		System.out.println("Your "+name+ " has been placed");
 		ordered = true;
 		return ordered;
 	}

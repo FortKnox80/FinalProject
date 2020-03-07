@@ -8,6 +8,7 @@ public class FlourlessChocolateCake extends Cake {
 	public FlourlessChocolateCake() {
 		ordered = false;
 		name = "Flourless Chocolate Cake";
+		spongeCakeType = "Rich, Fudgey, Chocolate Sponge";
 		filling = "Lemon Curd";
 		icingFlavor = "Vanilla Buttercream";
 		fondant = "Soft Yellow Fondant";

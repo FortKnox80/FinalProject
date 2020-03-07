@@ -2,12 +2,12 @@ package commands;
 
 import cakes.*;
 
-public class PlaceCakeOrderCommand implements Command {
+public class CancelCakeOrderCommand implements Command {
 
 	Cake cake;
 	
 	//Set the type of order we are placing
-	public PlaceCakeOrderCommand(Cake cake) {
+	public CancelCakeOrderCommand(Cake cake) {
 		this.cake = cake;
 	}
 	
