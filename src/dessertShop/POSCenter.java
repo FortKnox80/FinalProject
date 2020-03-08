@@ -1,6 +1,4 @@
 package dessertShop;
-
-import cakes.*;
 import commands.Command;
 import commands.NoCommand;
 

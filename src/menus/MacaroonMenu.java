@@ -6,7 +6,7 @@ import cakes.*;
 import menus.Iterator;
 import macaroons.*;
 
-//Create a menu for cakes 
+//Create a menu for macaroons 
 public class MacaroonMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
 	

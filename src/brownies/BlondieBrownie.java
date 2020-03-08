@@ -1,26 +1,16 @@
 package brownies;
 
-import dessertShop.*;
-
-//A class for lemon brownies
+//A class for blondie brownies
 public class BlondieBrownie extends Brownie {
 
 	public BlondieBrownie() {
 		ordered = false;
-		
 		name = "Blondes Have More Fun";
 		brownieBase = "Blondie Brownie Base";
 		fillings = "Milk Chocolate Chunks";
 		
 	}
-
-	//A method to bake the brownie
-	public Brownie bakeAbrownie(String type) {
-		Brownie brownie = bakeAbrownie(type);
-		
-		return brownie;
-	}
-
+	
 	//Set the brownie cost
 	public double cost() {
 		
@@ -30,7 +20,7 @@ public class BlondieBrownie extends Brownie {
 	//Place the brownie order
 	public boolean brownieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

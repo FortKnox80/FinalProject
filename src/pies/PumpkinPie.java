@@ -1,6 +1,6 @@
 package pies;
 
-//A class for strawberry rhubarb pies
+//A class for pumpkin pies
 public class PumpkinPie extends Pie {
 
 	public PumpkinPie() {
@@ -8,13 +8,6 @@ public class PumpkinPie extends Pie {
 		name = "Spiced Pumpkin Pie";
 		filling = "Holiday Spiced Pumpkin Filling";
 		crust = "Flakey, Buttery Crust With an Open Top and a Pretty Crust Based Pumpkin";
-	}
-
-	//A method to bake the pie
-	public Pie bakeAPie(String type) {
-		Pie pie = bakeAPie(type);
-		
-		return pie;
 	}
 
 	//Set the pie cost
@@ -26,7 +19,7 @@ public class PumpkinPie extends Pie {
 	//Place the pie order
 	public boolean pieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

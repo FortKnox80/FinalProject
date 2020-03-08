@@ -1,8 +1,6 @@
 package cheesecakes;
 
-import dessertShop.*;
-
-//A class for lemon cheesecakes
+//A class for raspberry cheesecakes
 public class RaspberryDelightCheesecake extends Cheesecake {
 
 	public RaspberryDelightCheesecake() {
@@ -11,13 +9,6 @@ public class RaspberryDelightCheesecake extends Cheesecake {
 		crust = "Buttery Graham Cracker";
 		filling = "White Chocolate Mousse";
 		toppings = "Raspberries with Sauce";
-	}
-
-	//A method to bake the cheesecake
-	public Cheesecake bakeACheesecake(String type) {
-		Cheesecake cheesecake = bakeACheesecake(type);
-		
-		return cheesecake;
 	}
 
 	//Set the cheesecake cost

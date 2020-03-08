@@ -1,9 +1,8 @@
 package dessertShop;
 
-import cakes.*;
+//An abstract class for different dessert factories
 
 public abstract class Shop {
-	
 	
 	public void menu() {
 		String menu = "";

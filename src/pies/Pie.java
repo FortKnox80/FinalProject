@@ -36,11 +36,6 @@ public abstract class Pie extends Desserts{
 		ordered = false;
 	}
 	
-	//Method to prepare a pie
-	public void preparePie() {
-		System.out.println("We are preparing your pie now.");
-	}
-	
 	//How much does the pie cost
 	public abstract double cost();
 }

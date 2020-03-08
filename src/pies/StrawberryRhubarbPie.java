@@ -10,13 +10,7 @@ public class StrawberryRhubarbPie extends Pie {
 		crust = "Flakey, Buttery Crust Formed Into a Traditional Lattice Work";
 	}
 
-	//A method to bake the pie
-	public Pie bakeAPie(String type) {
-		Pie pie = bakeAPie(type);
-		
-		return pie;
-	}
-
+	
 	//Set the pie cost
 	public double cost() {
 		
@@ -26,7 +20,7 @@ public class StrawberryRhubarbPie extends Pie {
 	//Place the pie order
 	public boolean pieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

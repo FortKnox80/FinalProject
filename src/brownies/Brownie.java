@@ -36,11 +36,6 @@ public abstract class Brownie extends Desserts{
 		ordered = false;
 	}
 	
-	//Method to prepare a brownie
-	public void prepareBrownie() {
-		System.out.println("We are preparing your brownie now.");
-	}
-	
 	//How much does the brownie cost
 	public abstract double cost();
 }

@@ -1,7 +1,6 @@
 package cakes;
 
-import cakes.*;
-
+//An unknown dessert
 public class UnknownCake extends Cake {
 
 	public UnknownCake() {

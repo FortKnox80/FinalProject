@@ -1,8 +1,6 @@
 package macaroons;
 
-import dessertShop.*;
-
-//A class for lemon macaroons
+//A class for orange macaroons
 public class OrangeCreamMacaroon extends Macaroon {
 
 	public OrangeCreamMacaroon() {
@@ -11,14 +9,7 @@ public class OrangeCreamMacaroon extends Macaroon {
 		filling = "Delicate Vanilla Buttercream With Orange Reduction Folded In";
 		macaroonFlavor = "Clementine Colored Vanilla Macaroon";
 	}
-
-	//A method to bake the macaroon
-	public Macaroon bakeAMacaroon(String type) {
-		Macaroon macaroon = bakeAMacaroon(type);
-		
-		return macaroon;
-	}
-
+	
 	//Set the macaroon cost
 	public double cost() {
 		
@@ -28,7 +19,7 @@ public class OrangeCreamMacaroon extends Macaroon {
 	//Place the macaroon order
 	public boolean macaroonOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

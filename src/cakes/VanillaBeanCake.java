@@ -1,5 +1,6 @@
 package cakes;
-//A class for lemon cakes
+
+//A class for vanilla cakes
 public class VanillaBeanCake extends Cake {
 
 	public VanillaBeanCake() {
@@ -11,13 +12,6 @@ public class VanillaBeanCake extends Cake {
 		fondant = "";
 	}
 
-	//A method to bake the cake
-	public Cake bakeACake(String type) {
-		Cake cake = bakeACake(type);
-		
-		return cake;
-	}
-
 	//Set the cake cost
 	public double cost() {
 		
@@ -27,7 +21,7 @@ public class VanillaBeanCake extends Cake {
 	//Place the cake order
 	public boolean cakeOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

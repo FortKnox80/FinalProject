@@ -1,8 +1,6 @@
 package brownies;
 
-import dessertShop.*;
-
-//A class for lemon brownies
+//A class for constellation brownies
 public class ConstellationBrownie extends Brownie {
 
 	public ConstellationBrownie() {
@@ -11,13 +9,6 @@ public class ConstellationBrownie extends Brownie {
 		brownieBase = "Dark Chocolate Brownie Base";
 		fillings = "White Chocolate Chunks as a Constellation Against a Dark Backdrop";
 		
-	}
-
-	//A method to bake the brownie
-	public Brownie bakeAbrownie(String type) {
-		Brownie brownie = bakeAbrownie(type);
-		
-		return brownie;
 	}
 
 	//Set the brownie cost
@@ -29,7 +20,7 @@ public class ConstellationBrownie extends Brownie {
 	//Place the brownie order
 	public boolean brownieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

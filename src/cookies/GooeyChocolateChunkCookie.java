@@ -1,8 +1,6 @@
 package cookies;
 
-import dessertShop.*;
-
-//A class for lemon cookies
+//A class for chocolate chunk cookies
 public class GooeyChocolateChunkCookie extends Cookie {
 
 	public GooeyChocolateChunkCookie() {
@@ -11,13 +9,6 @@ public class GooeyChocolateChunkCookie extends Cookie {
 		tastyBits = "Milk Chocolate Chunks";
 		cookieBase = "Soft Vanilla Cookie";
 		toppings = "";
-	}
-
-	//A method to bake the cookie
-	public Cookie bakeACookie(String type) {
-		Cookie cookie = bakeACookie(type);
-		
-		return cookie;
 	}
 
 	//Set the cookie cost
@@ -29,7 +20,7 @@ public class GooeyChocolateChunkCookie extends Cookie {
 	//Place the cookie order
 	public boolean cookieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

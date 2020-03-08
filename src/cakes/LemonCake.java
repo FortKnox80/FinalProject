@@ -1,7 +1,5 @@
 package cakes;
 
-import dessertShop.*;
-
 //A class for lemon cakes
 public class LemonCake extends Cake {
 
@@ -14,13 +12,7 @@ public class LemonCake extends Cake {
 		fondant = "Soft Yellow Fondant";
 	}
 
-	//A method to bake the cake
-	public Cake bakeACake(String type) {
-		Cake cake = bakeACake(type);
-		
-		return cake;
-	}
-
+	
 	//Set the cake cost
 	public double cost() {
 		
@@ -30,7 +22,7 @@ public class LemonCake extends Cake {
 	//Place the cake order
 	public boolean cakeOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

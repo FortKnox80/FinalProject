@@ -1,6 +1,6 @@
 package pies;
 
-//A class for strawberry rhubarb pies
+//A class for blackberry pies
 public class BlackberryPie extends Pie {
 
 	public BlackberryPie() {
@@ -10,12 +10,6 @@ public class BlackberryPie extends Pie {
 		crust = "Flakey, Buttery Crust Topped With Blackbird Art Work";
 	}
 
-	//A method to bake the pie
-	public Pie bakeAPie(String type) {
-		Pie pie = bakeAPie(type);
-		
-		return pie;
-	}
 
 	//Set the pie cost
 	public double cost() {

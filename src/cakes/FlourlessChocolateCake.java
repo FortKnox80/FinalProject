@@ -1,8 +1,7 @@
 package cakes;
 
-import dessertShop.*;
+//A class for chocolate cakes
 
-//A class for lemon cakes
 public class FlourlessChocolateCake extends Cake {
 
 	public FlourlessChocolateCake() {
@@ -14,12 +13,6 @@ public class FlourlessChocolateCake extends Cake {
 		fondant = "";
 	}
 
-	//A method to bake the cake
-	public Cake bakeACake(String type) {
-		Cake cake = bakeACake(type);
-		
-		return cake;
-	}
 
 	//Set the cake cost
 	public double cost() {
@@ -30,7 +23,7 @@ public class FlourlessChocolateCake extends Cake {
 	//Place the cake order
 	public boolean cakeOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

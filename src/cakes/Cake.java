@@ -38,10 +38,6 @@ public abstract class Cake extends Desserts {
 		ordered = false;
 	}
 	
-	//Method to prepare a cake
-	public void prepareCake() {
-		System.out.println("We are preparing your cake now.");
-	}
 	
 	//How much does the cake cost
 	public abstract double cost();

@@ -37,11 +37,7 @@ public abstract class Cookie extends Desserts{
 		ordered = false;
 	}
 	
-	//Method to prepare a cookie
-	public void prepareCake() {
-		System.out.println("We are preparing your cake now.");
-	}
-	
+
 	//How much does the cookie cost
 	public abstract double cost();
 }

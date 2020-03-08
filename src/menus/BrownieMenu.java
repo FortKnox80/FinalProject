@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import brownies.*;
 import menus.Iterator;
 
-//Create a menu for cakes 
+//Create a menu for brownies 
 public class BrownieMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
 	

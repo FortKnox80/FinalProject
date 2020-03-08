@@ -1,5 +1,6 @@
 package cakes;
-//A class for lemon cakes
+
+//A class for champagne cakes
 public class PinkChampagneCake extends Cake {
 
 	public PinkChampagneCake() {
@@ -10,14 +11,7 @@ public class PinkChampagneCake extends Cake {
 		icingFlavor = "Pink Champagne Vanilla Swiss Buttercream";
 		fondant = "and a Soft, White, Quilted Vanilla Fondant";
 	}
-
-	//A method to bake the cake
-	public Cake bakeACake(String type) {
-		Cake cake = bakeACake(type);
-		
-		return cake;
-	}
-
+	
 	//Set the cake cost
 	public double cost() {
 		
@@ -27,7 +21,7 @@ public class PinkChampagneCake extends Cake {
 	//Place the cake order
 	public boolean cakeOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

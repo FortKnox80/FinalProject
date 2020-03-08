@@ -1,8 +1,6 @@
 package macaroons;
 
-import dessertShop.*;
-
-//A class for lemon macaroons
+//A class for raspberry macaroons
 public class RaspberryMacaroon extends Macaroon {
 
 	public RaspberryMacaroon() {
@@ -10,13 +8,6 @@ public class RaspberryMacaroon extends Macaroon {
 		name = "Rocking Raspberry Macaroon";
 		filling = "Vanilla Bean Buttercream Swirled With Raspberry Coulis";
 		macaroonFlavor = "Pink Raspberry Macaroon";
-	}
-
-	//A method to bake the macaroon
-	public Macaroon bakeAMacaroon(String type) {
-		Macaroon macaroon = bakeAMacaroon(type);
-		
-		return macaroon;
 	}
 
 	//Set the macaroon cost
@@ -28,7 +19,7 @@ public class RaspberryMacaroon extends Macaroon {
 	//Place the macaroon order
 	public boolean macaroonOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

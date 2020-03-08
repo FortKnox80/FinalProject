@@ -1,6 +1,6 @@
 package pies;
 
-//A class for strawberry rhubarb pies
+//A class for pecan pies
 public class PecanPie extends Pie {
 
 	public PecanPie() {
@@ -8,13 +8,6 @@ public class PecanPie extends Pie {
 		name = "Grandma's Pecan Pie";
 		filling = "Creamy, Rich Pecan Filling";
 		crust = "Flakey, Buttery Crust With an Open Top and a Pretty Crust Based Leaf";
-	}
-
-	//A method to bake the pie
-	public Pie bakeAPie(String type) {
-		Pie pie = bakeAPie(type);
-		
-		return pie;
 	}
 
 	//Set the pie cost

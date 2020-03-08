@@ -1,8 +1,6 @@
 package cookies;
 
-import dessertShop.*;
-
-//A class for lemon cookies
+//A class for lavender cookies
 public class LavenderBlueberryCookie extends Cookie {
 
 	public LavenderBlueberryCookie() {
@@ -13,12 +11,6 @@ public class LavenderBlueberryCookie extends Cookie {
 		toppings = " ";
 	}
 
-	//A method to bake the cookie
-	public Cookie bakeACookie(String type) {
-		Cookie cookie = bakeACookie(type);
-		
-		return cookie;
-	}
 
 	//Set the cookie cost
 	public double cost() {
@@ -29,7 +21,7 @@ public class LavenderBlueberryCookie extends Cookie {
 	//Place the cookie order
 	public boolean cookieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

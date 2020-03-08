@@ -1,7 +1,5 @@
 package cookies;
 
-import dessertShop.*;
-
 //A class for lemon cookies
 public class LemonCookie extends Cookie {
 
@@ -13,13 +11,6 @@ public class LemonCookie extends Cookie {
 		toppings = "Topped With Lemon Curd";
 	}
 
-	//A method to bake the cookie
-	public Cookie bakeACookie(String type) {
-		Cookie cookie = bakeACookie(type);
-		
-		return cookie;
-	}
-
 	//Set the cookie cost
 	public double cost() {
 		
@@ -29,7 +20,7 @@ public class LemonCookie extends Cookie {
 	//Place the cookie order
 	public boolean cookieOrdered() {
 		ordered = true;
-		System.out.println("Order placed for a " + name + ".");
+		System.out.println("Your " +name+ " order has been placed");
 		return ordered;
 	}
 	

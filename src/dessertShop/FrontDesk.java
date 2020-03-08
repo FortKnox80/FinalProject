@@ -13,13 +13,16 @@ import pies.*;
 
 public class FrontDesk {
 	
+	//Place the order on the POS and instantiate a new dessert based on the order
 	public static Desserts PlacePOSOrder(String orderSelection, Menu menu) {
+		
 		Desserts dessert = new UnknownCake();
 		POSConsole pos = new POSConsole();
 		Scanner userInput = new Scanner(System.in);
 		WeddingShop weddingShop = new WeddingShop();
 		
 		while (true) {
+			//Inputs are taken in and processed based on the menu that was selected
 			if(menu.toString().equalsIgnoreCase(weddingShop.brownieMenu.toString())) {
 				if(orderSelection.toLowerCase().contains("blondie")) {
 					pos.orderButtonPushed(pos.blondieB);
@@ -212,6 +215,7 @@ public class FrontDesk {
 		}
 	}
 	
+	//Determine which menu to print out based aon the dessert type selected
 	public static Menu GetMenu(String menuSelection) {
 		WeddingShop weddingShop = new WeddingShop();
 		Scanner userInput = new Scanner(System.in);
@@ -256,6 +260,7 @@ public class FrontDesk {
 		
 	}
 
+	//Decorate the decided upon dessert based on user selection
 	public static Desserts OrderDecorations(Desserts dessert, String decoration) {
 		
 		WeddingShop weddingShop = new WeddingShop();
@@ -286,6 +291,7 @@ public class FrontDesk {
 	public static void main(String[] args) {
 		WeddingShop weddingShop = new WeddingShop();
 		
+		//Print out a welcome
 		System.out.println("Welcome to Fiona's Fabulous Desserts! We want to bring a unique and beautiful flair to your wedding. \n"
 				+ "We for one are tired of the typical three tier cake being the only option, so we have come up with several\n"
 				+ "different takes for a beautiful and unique flare for your elegant or fun wedding.\n"
@@ -295,16 +301,21 @@ public class FrontDesk {
 		
 		String menuSelection = userInput.nextLine();
 		
-		
+		//Determine which menu to show based on dessert type desired
 		Menu menu = GetMenu(menuSelection);
+		
 		System.out.println("Which of these delectable items would you like to place an order for?");
 		
 		
 		String selection = userInput.nextLine();
+		
+		//Place an order for the dessert they want
 		Desserts dessert = PlacePOSOrder(selection, menu);
 		
 		
 		System.out.println("What type of decorations would you like?");
+		
+		//Show the types of decorations we have
 		weddingShop.decorationsMenu();
 		
 		String decorationRequest = userInput.nextLine();
@@ -312,6 +323,7 @@ public class FrontDesk {
 		
 		
 		while(true) {
+			//If they are done picking decorations confirm the order, get the guest count, and show the price
 			if(decorationRequest.toLowerCase().contains("no") || decorationRequest.toLowerCase().contains("none") || decorationRequest.toLowerCase().contains("don't")) {
 				
 				System.out.printf("That sounds so beautiful! We cannot wait to bring your " + dessert.getFlavor() +
@@ -326,6 +338,7 @@ public class FrontDesk {
 				break;
 			}
 			
+			//Give the option for multiple decorations
 			dessert = OrderDecorations(dessert, decorationRequest);
 			System.out.println("Would you like any other decorations?");
 			decorationRequest = userInput.nextLine();

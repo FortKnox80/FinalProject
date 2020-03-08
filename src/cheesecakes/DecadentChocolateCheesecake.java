@@ -1,8 +1,6 @@
 package cheesecakes;
 
-import dessertShop.*;
-
-//A class for lemon cheesecakes
+//A class for chocolate cheesecakes
 public class DecadentChocolateCheesecake extends Cheesecake {
 
 	public DecadentChocolateCheesecake() {
@@ -11,13 +9,6 @@ public class DecadentChocolateCheesecake extends Cheesecake {
 		crust = "Flourless Fudge";
 		filling = "Dark Chocolate Mousse";
 		toppings = "White Chocolate Sauce";
-	}
-
-	//A method to bake the cheesecake
-	public Cheesecake bakeACheesecake(String type) {
-		Cheesecake cheesecake = bakeACheesecake(type);
-		
-		return cheesecake;
 	}
 
 	//Set the cheesecake cost

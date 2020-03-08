@@ -1,8 +1,6 @@
 package cheesecakes;
 
-import dessertShop.*;
-
-//A class for lemon cheesecakes
+//A class for blueberry cheesecakes
 public class BlueberryCheesecake extends Cheesecake {
 
 	public BlueberryCheesecake() {
@@ -13,12 +11,6 @@ public class BlueberryCheesecake extends Cheesecake {
 		toppings = "Blueberries with Sauce";
 	}
 
-	//A method to bake the cheesecake
-	public Cheesecake bakeACheesecake(String type) {
-		Cheesecake cheesecake = bakeACheesecake(type);
-		
-		return cheesecake;
-	}
 
 	//Set the cheesecake cost
 	public double cost() {

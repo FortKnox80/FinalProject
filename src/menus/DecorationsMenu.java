@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import brownies.*;
 import menus.Iterator;
 
-//Create a menu for cakes 
+//Create a menu for decorations 
 public class DecorationsMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
 	//Set a maximum number of items for the menu

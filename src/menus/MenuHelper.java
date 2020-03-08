@@ -2,21 +2,25 @@ package menus;
 
 import menus.Iterator;
 
+//A helper for rattling off all the menu items
 public class MenuHelper {
 
 	Menu menu;
 
+	//The helper will work with the passed in menu
 	public MenuHelper(Menu menu) {
 		this.menu = menu;
 	}
 
+	//A method for printing the menu out
 	public void printMenu() {
-		Iterator cakeIterator = menu.createIterator();
+		Iterator menuIterator = menu.createIterator();
 
 		System.out.println("Menu\n-------");
-		printMenu(cakeIterator);
+		printMenu(menuIterator);
 	}
 
+	//Iterate over each item on the menu to print out
 	public void printMenu(Iterator iterator) {
 		while (iterator.hasNext()) {
 			MenuItem menuItem = iterator.next();
@@ -27,10 +31,12 @@ public class MenuHelper {
 		}
 	}
 	
+	//Print out a gluten free menu
 	public void printGlutenFreeMenu() {
 		printGlutenFreeMenu(menu.createIterator());
 	}
 
+	//Get the gluten free items from the menu
 	public boolean isItemGlutenFree(String name) {
 		Iterator cakeMenuIterator = menu.createIterator();
 		
@@ -40,6 +46,7 @@ public class MenuHelper {
 		return false;
 	}
 	
+	//Iterate over each gluten free item and print it out
 	public void printGlutenFreeMenu(Iterator iterator) {
 		while(iterator.hasNext()) {
 			MenuItem menuItem = iterator.next();
@@ -51,6 +58,7 @@ public class MenuHelper {
 		}
 	}
 	
+	//Determine whether each item is gluten free 
 	private boolean isGlutenFree(String name, Iterator iterator) {
 		while (iterator.hasNext()) {
 			MenuItem menuItem = iterator.next();
