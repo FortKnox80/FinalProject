@@ -306,13 +306,13 @@ public class FrontDesk {
 			if (decorationRequest.toLowerCase().contains("no") || decorationRequest.toLowerCase().contains("none")
 					|| decorationRequest.toLowerCase().contains("don't")) {
 
-				System.out.printf("That sounds so beautiful! We cannot wait to bring your " + dessert.getFlavor()
-						+ " to your wedding for you. \nIt is going to be beautiful.");
+				System.out.println("That sounds so beautiful! We cannot wait to bring your " + dessert.getFlavor()
+						+ " to your wedding for you. \nIt is going to be beautiful. ");
 				System.out.println("How many guests are you expecting?");
 				double guestCount = userInput.nextInt();
 				double cost = guestCount * dessert.cost() / 10;
 				String formattedCost = String.format("%.02f", cost);
-				System.out.printf("The cost will be: " + cost + "So that we can make enoough for all of your guests. "
+				System.out.printf("The cost will be: " + cost + " So that we can make enoough for all of your guests. "
 						+ "\nWe will be in contact with you 2 months before to check on the numbers. I hope you have a great day!");
 				userInput.close();
 				break;
