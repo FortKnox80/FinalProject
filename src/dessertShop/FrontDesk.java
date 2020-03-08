@@ -46,7 +46,7 @@ public class FrontDesk {
 					orderSelection = userInput.nextLine();
 				}
 			} else if (menu.toString().equalsIgnoreCase(weddingShop.cakeMenu.toString())) {
-				if (orderSelection.toLowerCase().contains("flourless")) {
+				if (orderSelection.toLowerCase().contains("flourless") || orderSelection.toLowerCase().contains("chocolate")) {
 					pos.orderButtonPushed(pos.chocC);
 					dessert = new FlourlessChocolateCake();
 					return dessert;
@@ -111,7 +111,7 @@ public class FrontDesk {
 					pos.orderButtonPushed(pos.frostedCK);
 					dessert = new FrostedSugarCookie();
 					return dessert;
-				} else if (orderSelection.toLowerCase().contains("gooey")) {
+				} else if (orderSelection.toLowerCase().contains("gooey") || orderSelection.toLowerCase().contains("chocolate") ) {
 					pos.orderButtonPushed(pos.chocCK);
 					dessert = new GooeyChocolateChunkCookie();
 					return dessert;
