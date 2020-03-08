@@ -25,7 +25,8 @@ public class WeddingShop extends Shop {
 	 
 	 DecorationsMenu decorationsMenu = new DecorationsMenu();
 	 MenuHelper decorationsHelper = new MenuHelper(decorationsMenu);
-	 
+	
+	 GlutenFreeMenu glutenFreeMenu = new GlutenFreeMenu();
 	
 	//Set up a cake menu
 	public void cakeMenu() {
